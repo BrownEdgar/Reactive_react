@@ -1,20 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-
+import HomeWork4 from "./HomeWorks/HomeWork4/HW4"
 
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
-  return (
-    <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-    </div>
-  )
+    return(
+      <HomeWork4/>
+    )
 }
 
 export default App
