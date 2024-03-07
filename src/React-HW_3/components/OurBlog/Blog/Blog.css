@@ -1,0 +1,65 @@
+.content__blog-card {
+  padding: 3rem 2rem;
+  border: 1px solid hsla(0, 0%, 53%, 0.2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.card-blog__data {
+  font-family: Poppins;
+  color: hsla(0, 0%, 53%, 0.7);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.card-blog__data > span:first-child {
+   text-transform: uppercase;
+}
+
+.card-blog__title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.card-blog__desc {
+  flex: 1 1 auto;
+  color: hsla(0, 0%, 53%, 0.7);
+  font-weight: 500;
+  line-height: 2;
+}
+
+.card-blog__desc.hide {
+   visibility: hidden;
+   pointer-events: none;
+   height: 0;
+   overflow: hidden;
+   opacity: 0;
+   transition: all .23s ease 0s;
+}
+
+.card-blog__desc.opened {
+   opacity: 1;
+   height: 100%;
+   visibility: visible;
+   pointer-events: auto;
+   overflow: visible;
+   margin-top: 1.5rem;
+   transition: all .23s ease 0s;
+   color: rgb(255, 129, 150);
+}
+
+.card-blog__btn {
+   font-family: Poppins;
+   border: none;
+   background-color: transparent;
+   text-decoration: underline;
+   font-weight: 600;
+   font-size: 1rem;
+   text-underline-offset: 6px;
+   text-decoration-thickness: 2px;
+   text-transform: uppercase;
+   margin-top: 1.5rem;
+}
