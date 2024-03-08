@@ -1,0 +1,27 @@
+.App {
+    max-width: 1440px;
+    margin: 150px auto;
+    &__title {
+        text-align: center;   
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 50px;
+    }
+    & > div {
+        border: 1px solid #ddd;
+        padding: 1em;
+        flex-basis: 32%;
+        min-height: 350px;
+        border-radius: 4px;
+        clip-path: circle(20.3% at 100% 0);
+        &:hover {
+        background-color: pink;
+        cursor: pointer;
+        transition: 0.6s;
+        clip-path: circle(142.2% at 100% 0);
+    }
+    }
+}
