@@ -1,19 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import './assets/Home Work/React 1/About'
+import About from './assets/Home Work/React 1/About'
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
   return (
-    <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-    </div>
+    <About />
   )
 }
 
