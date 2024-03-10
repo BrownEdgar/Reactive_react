@@ -50,6 +50,7 @@ export default function App() {
   }
   return(
     <table className='App'>
+      <caption>Showing 9 movies in the database.</caption>
       <thead>
         <tr>
           <th>Title</th>
