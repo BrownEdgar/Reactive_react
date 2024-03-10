@@ -42,6 +42,12 @@ export default function App() {
             },
         ]
   )
+
+  const handleDelete = (id) => {
+    data.filter(film => (
+      film.id !== id
+    ))
+  }
   return(
     <table className='App'>
       <thead>
@@ -60,7 +66,7 @@ export default function App() {
               <td>{film.stock}</td>
               <td>{film.rate}</td>
               <td>
-                <button className='App__btn' onClick={}>Delete</button>
+                <button className='App__btn' onClick={() => handleDelete(film.id)}>Delete</button>
               </td>
             </tr>
           </tbody>
