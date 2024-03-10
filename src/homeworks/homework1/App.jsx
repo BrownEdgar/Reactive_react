@@ -51,7 +51,19 @@ export default function App() {
           <th>Stock</th>
           <th>Rate</th>
         </tr>
-        
+        {data.map(film => {
+          <tbody key={film.id}>
+            <tr>
+              <td>{film.title}</td>
+              <td>{film.genre}</td>
+              <td>{film.stock}</td>
+              <td>{film.rate}</td>
+              <td>
+                <button>Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        })}
       </thead>
     </table>
   )
