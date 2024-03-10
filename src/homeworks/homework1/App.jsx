@@ -43,16 +43,6 @@ export default function App() {
         ]
     )
   return(
-    <div className='App'>
-        <h1 className='App__title'>Showing 9 movies in the database</h1>
-        <div className='App__content'>
-          <h3>Title</h3>
-          <ul>
-            <li>Genre</li>
-            <li>Stock</li>
-            <li>Rate</li>
-          </ul>
-        </div>
-    </div>
+    <div></div>
   )
 }
