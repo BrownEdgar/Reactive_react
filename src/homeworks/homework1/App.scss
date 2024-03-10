@@ -1,0 +1,17 @@
+.App{
+    max-width: 1440px;
+    &__title{
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__content{
+        width: 100%;
+        display: flex;
+        & > ul{
+            display: flex;
+            gap: 200px;
+            font-size: 25px;
+            list-style: none;
+        }        
+    }
+}
