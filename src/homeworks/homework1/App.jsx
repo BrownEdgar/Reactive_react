@@ -3,7 +3,7 @@ import './App.scss'
 import { useState } from 'react'
 
 export default function App() {
-  const [data, setdata] = useState(
+  const [data, setData] = useState(
         [
             {
              id: 1,
@@ -44,9 +44,9 @@ export default function App() {
   )
 
   const handleDelete = (id) => {
-    data.filter(film => (
+    setData(data.filter(film => (
       film.id !== id
-    ))
+    )))
   }
   return(
     <table className='App'>
@@ -66,7 +66,7 @@ export default function App() {
               <td>{film.stock}</td>
               <td>{film.rate}</td>
               <td>
-                <button className='App__btn' onClick={() => handleDelete(film.id)}>Delete</button>
+                <button onClick={() => handleDelete(film.id)}>Delete</button>
               </td>
             </tr>
           </tbody>

@@ -1,7 +1,7 @@
-.App {
+.App{
     font-size: 30px;
     margin: 50px auto;
-    th {
+    th{
         text-align: center;
         border-top: 3px solid grey;
         border-bottom: 3px solid grey;
@@ -13,7 +13,7 @@
             text-align: left;
         }
     }
-    td {
+    td{
         border-bottom: 1px solid gray;
         padding-block: 20px;
         text-align: center;
@@ -22,7 +22,7 @@
             text-align: left;
         }
     }
-    &__btn{
+    button{
         background-color: red;
         font-weight: 800;
         font-size: 20px;
