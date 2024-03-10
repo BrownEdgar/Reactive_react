@@ -3,7 +3,7 @@ import './App.scss'
 import { useState } from 'react'
 
 export default function App() {
-    const [data, setdata] = useState(
+  const [data, setdata] = useState(
         [
             {
              id: 1,
@@ -41,8 +41,18 @@ export default function App() {
              rate: 3.5,
             },
         ]
-    )
+  )
   return(
-    <div></div>
+    <table className='App'>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Genre</th>
+          <th>Stock</th>
+          <th>Rate</th>
+        </tr>
+        
+      </thead>
+    </table>
   )
 }
