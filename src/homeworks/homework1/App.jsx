@@ -51,7 +51,7 @@ export default function App() {
           <th>Stock</th>
           <th>Rate</th>
         </tr>
-        {data.map(film => {
+        {data.map(film => (
           <tbody key={film.id}>
             <tr>
               <td>{film.title}</td>
@@ -63,7 +63,7 @@ export default function App() {
               </td>
             </tr>
           </tbody>
-        })}
+        ))}
       </thead>
     </table>
   )
