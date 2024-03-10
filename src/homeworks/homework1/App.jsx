@@ -60,7 +60,7 @@ export default function App() {
               <td>{film.stock}</td>
               <td>{film.rate}</td>
               <td>
-                <button>Delete</button>
+                <button className='App__btn' onClick={}>Delete</button>
               </td>
             </tr>
           </tbody>

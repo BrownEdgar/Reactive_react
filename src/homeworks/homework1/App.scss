@@ -1,5 +1,40 @@
-.App{
-    font-size: 20px;
-    border-collapse: collapse;
-    &__
+.App {
+    font-size: 30px;
+    margin: 50px auto;
+    th {
+        text-align: center;
+        border-top: 3px solid grey;
+        border-bottom: 3px solid grey;
+        width: 200px;
+        padding-block: 20px;
+        font-weight: 900;
+        &:first-child{
+            width: 400px;
+            text-align: left;
+        }
+    }
+    td {
+        border-bottom: 1px solid gray;
+        padding-block: 20px;
+        text-align: center;
+        &:first-child {
+            width: 400px;
+            text-align: left;
+        }
+    }
+    &__btn{
+        background-color: red;
+        font-weight: 800;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.3s;
+        &:hover{
+            scale: 1.1;
+        }
+        &:active{
+            background-color: royalblue;
+        }
+    }
 }
