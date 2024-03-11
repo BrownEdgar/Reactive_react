@@ -1,0 +1,74 @@
+.Movies {
+    &__parentList {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        height: 80px;
+        border-top: 4px solid #333;
+        border-bottom: 4px solid #333;
+    }
+    &__list-first {
+        font-weight: 600;
+        font-size: 26px;
+        position: absolute;
+        left: -100px;
+        text-align: center;
+        margin-left: 280px;
+    }
+    &__list {
+        font-weight: 600;
+        font-size: 26px;
+        position: relative;
+        left: 20px;
+        text-align: center;
+        margin-left: 200px;
+    }
+    &__body {
+        border: 2px solid #222;
+    }
+    &__parentList-body {
+        list-style: none;
+        position: relative;
+        right: 130px;
+        font-size: 22px;
+        margin-bottom: -50px;
+    }
+    // &__parentList-bodySecond {
+        
+    // }
+    &__parentList-bodyThird {
+        width: 50px;
+        list-style: none;
+        position: relative;
+        font-size: 22px;
+        top: 20px;
+        left: 600px;
+    }
+    &__praentList-bodyFor {
+        width: 50px;
+        list-style: none;
+        position: relative;
+        left: 840px;
+        bottom: 40px;
+        font-size: 22px;
+        top: -15px;
+    }
+    &__list-body {
+        margin-left: 250px;
+    }
+    &__btn {
+        position: relative;
+        top: 35px;
+        left: 1280px;
+        width: 90px;
+        height: 40px;
+        background-color: rgb(211, 38, 38);
+        color: #888;
+        border-radius: 6px;
+        font-size: 18px;
+        border: 0;
+        cursor: pointer;
+    }
+}
