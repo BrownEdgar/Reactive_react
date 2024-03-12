@@ -1,0 +1,29 @@
+.Comments{
+    margin: 50px auto;
+    &__title{
+        font-weight: 800;
+        font-size: 45px;
+        color: #e1b441;
+    }
+    &__body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        h2 {
+            color: #e1b441;
+        }
+        div {
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 10px solid #e1b441;
+            position: relative;
+            button{
+                position: absolute;
+                bottom: 10px;
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

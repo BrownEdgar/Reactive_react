@@ -28,11 +28,8 @@ export default function Posts() {
                 <div key={post.id}>
                     <h2>{post.title}</h2>
                     <p>{post.body}</p>
-                    <button>
-                        <i
-                            className='bx bxs-message-square-x bx-md'
-                            onClick={() => handleDelete(post.id)}>
-                        </i>
+                    <button onClick={() => handleDelete(post.id)}>
+                        <i className='bx bxs-message-square-x bx-md'></i>
                     </button>
                 </div>
                 )

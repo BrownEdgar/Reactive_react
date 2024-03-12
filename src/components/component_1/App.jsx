@@ -27,12 +27,8 @@ export default function Todos() {
             return (
               <div key={todos.id}>
                 <h2>{todos.title}</h2>
-                <p>{todos.body}</p>
-                <button>
-                  <i
-                    className='bx bxs-message-square-x bx-md'
-                    onClick={() => handleDelete(todos.id)}>
-                  </i>
+                <button onClick={() => handleDelete(todos.id)}>
+                  <i className='bx bxs-message-square-x bx-md'></i>
                 </button>
               </div>
             )

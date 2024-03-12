@@ -26,13 +26,11 @@ export default function Users() {
           data.map(user => {
             return (
               <div key={user.id}>
-                <h2>{user.title}</h2>
-                <p>{user.body}</p>
-                <button>
-                  <i
-                    className='bx bxs-message-square-x bx-md'
-                    onClick={() => handleDelete(user.id)}>
-                  </i>
+                <h1>{user.name}</h1>
+                <h3>{user.username}</h3>
+                <h2>{user.email}</h2>
+                <button onClick={() => handleDelete(user.id)}>
+                  <i className='bx bxs-message-square-x bx-md'></i>
                 </button>
               </div>
             )

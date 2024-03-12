@@ -26,13 +26,10 @@ export default function Comments() {
           data.map(comment => {
             return (
               <div key={comment.id}>
-                <h2>{comment.title}</h2>
+                <h2>{comment.name}</h2>
                 <p>{comment.body}</p>
-                <button>
-                  <i
-                    className='bx bxs-message-square-x bx-md'
-                    onClick={() => handleDelete(comment.id)}>
-                  </i>
+                <button onClick={() => handleDelete(comment.id)}>
+                  <i className='bx bxs-message-square-x bx-md'></i>
                 </button>
               </div>
             )
