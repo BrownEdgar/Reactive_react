@@ -19,6 +19,26 @@ export default function Posts() {
     }
   
     return (
-      <div>App</div>
+      <div className='Posts'>
+        <h1 className='Posts__title'>Our Posts</h1>
+        <div className="Posts__body">
+            {
+            data.map(post => {
+                return (
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.body}</p>
+                    <button>
+                        <i
+                            className='bx bxs-message-square-x bx-md'
+                            onClick={() => handleDelete(post.id)}>
+                        </i>
+                    </button>
+                </div>
+                )
+            })
+            }
+        </div>
+      </div>
     )
 }

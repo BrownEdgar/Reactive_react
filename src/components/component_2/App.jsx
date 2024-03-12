@@ -19,6 +19,26 @@ export default function Comments() {
   }
 
   return (
-    <div>App</div>
+    <div className='Comments'>
+      <h1 className='Comments__title'>Our Comments</h1>
+      <div className="Comments__body">
+        {
+          data.map(comment => {
+            return (
+              <div key={comment.id}>
+                <h2>{comment.title}</h2>
+                <p>{comment.body}</p>
+                <button>
+                  <i
+                    className='bx bxs-message-square-x bx-md'
+                    onClick={() => handleDelete(comment.id)}>
+                  </i>
+                </button>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
   )
 }

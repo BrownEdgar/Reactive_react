@@ -19,6 +19,26 @@ export default function Users() {
   }
 
   return (
-    <div>App</div>
+    <div className='Users'>
+      <h1 className='Users__title'>Our Users</h1>
+      <div className="Users__body">
+        {
+          data.map(user => {
+            return (
+              <div key={user.id}>
+                <h2>{user.title}</h2>
+                <p>{user.body}</p>
+                <button>
+                  <i
+                    className='bx bxs-message-square-x bx-md'
+                    onClick={() => handleDelete(user.id)}>
+                  </i>
+                </button>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
   )
 }
