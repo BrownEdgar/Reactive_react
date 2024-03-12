@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
-import { useState } from 'react'
 
 export default function App() {
   const [data, setData] = useState(
@@ -50,13 +49,14 @@ export default function App() {
   }
   return(
     <table className='App'>
-      <caption>Showing 9 movies in the database.</caption>
+      <caption>Showing {data.length} movies in the database.</caption>
       <thead>
         <tr>
           <th>Title</th>
           <th>Genre</th>
           <th>Stock</th>
           <th>Rate</th>
+          <th></th>
         </tr>
       </thead>
       {data.map(film => (
