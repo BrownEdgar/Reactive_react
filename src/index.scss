@@ -8,10 +8,22 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  max-width: 1440px;
-  margin: 0 auto;
+  font-weight: 400;
 }
 
 a {
   text-decoration: none;
+}
+
+._container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 30px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
 }
