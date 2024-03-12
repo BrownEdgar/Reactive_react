@@ -43,9 +43,7 @@ export default function App() {
   )
 
   const handleDelete = (id) => {
-    setData(data.filter(film => (
-      film.id !== id
-    )))
+    setData(data.filter(film => film.id !== id))
   }
   return(
     <table className='App'>
