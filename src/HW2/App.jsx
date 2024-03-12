@@ -43,7 +43,7 @@ export default function App() {
   }  
   return (
     <div className='App'>
-      <h1 className='App__title'>Showing 9 movies in the database</h1>
+      <h1 className='App__title'>Showing {films.length} movies in the database</h1>
       <table className='App__content'>
         <thead>
           <tr>
