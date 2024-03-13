@@ -43,7 +43,7 @@ export default function App() {
   }  
   return (
     <div className='App'>
-      <h1 className='App__title'>Showing {films.length} movies in the database</h1>
+      <h1 className='App__title'>Showing {films.length || 0} movies in the database</h1>
       <table className='App__content'>
         <thead>
           <tr>
@@ -54,7 +54,7 @@ export default function App() {
             <th></th>
           </tr>
         </thead>
-          {films.map((elem, index) => {
+          {films.map(elem => {
             return (
               <tbody key={elem.id}>
                 <tr>
@@ -63,7 +63,7 @@ export default function App() {
                   <td>{elem.stock}</td>
                   <td>{elem.rate}</td>
                   <td>
-                    <button onClick={() => deleteIndex(index)} className='App__btn'>Delete</button>
+                    <button onClick={() => deleteIndex(elem.id)} className='App__btn'>Delete</button>
                   </td>
                 </tr>
               </tbody>

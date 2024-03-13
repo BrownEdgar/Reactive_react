@@ -13,8 +13,10 @@
       border: 1px solid black;
       padding: 1em;
     }
-    & > th, td:hover {
+    tr:hover {
       background-color: gray;
+      transition: .3s;
+      cursor: pointer;
     }
 
   }
