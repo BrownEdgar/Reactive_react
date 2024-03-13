@@ -9,19 +9,49 @@
         justify-content: space-between;
         gap: 30px;
         margin-top: 50px;
-    }
-    & > div {
+        & > div {
         border: 1px solid #ddd;
-        padding: 1em;
+        padding: 3em 1em;
         flex-basis: 32%;
         min-height: 350px;
-        border-radius: 4px;
-        clip-path: circle(20.3% at 100% 0);
+        border-radius: 40px;
+        // clip-path: circle(20.3% at 100% 0);
         &:hover {
-        background-color: pink;
+        background-color: palevioletred;
         cursor: pointer;
         transition: 0.6s;
-        clip-path: circle(142.2% at 100% 0);
+        // clip-path: circle(142.2% at 100% 0);
     }
+    p {
+        width: 90%;
+        margin: 16px auto;
+        color: grey;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    }
+    }
+    &__btn {
+        margin-bottom: 40px;
+        padding: 4px 0px;
+        margin-left: 36%;
+        border: 0;
+        border-bottom: 3px solid #111;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: transparent;
+        font-weight: 600px;
+        font-size: 18px;
+
+    }
+    &__extra {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 1;
+        user-select: none;transition: 0.3s;
+        &:active {
+            max-height: 200px;
+            user-select: auto;
+        }
     }
 }
