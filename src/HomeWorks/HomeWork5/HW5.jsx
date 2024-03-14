@@ -76,16 +76,6 @@ const handleClick = (index) => {
             </tbody>
           </table>
 
-            <table>
-              {
-                data.map((elem,index) => {
-                    <tr key={elem.id}>
-                        <th>elem.</th>
-                    </tr>
-                })
-              }
-            </table>
-
     </div>
   )
 }
