@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import Tasks from './components/Todos';
-import Comments from './components/Comments';
-import Users from './components/Users';
-import Messages from './components/Posts';
-import './Apply.css'
+import Tasks from './Todos';
+import './App.scss'
 
 function App() {
   return (
     <div className="App">
-      <h1></h1>
       <Tasks />
-      <Comments />
-      <Users />
-      <Messages />
     </div>
   );
 }
