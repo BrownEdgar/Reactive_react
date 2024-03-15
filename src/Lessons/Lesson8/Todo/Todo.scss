@@ -1,0 +1,29 @@
+.Todo {
+    flex-shrink: 0;
+    flex-basis: 48%;
+    background-color: royalblue;
+    padding: 1em;
+    position: relative;
+    color: whitesmoke;
+    &__status {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 12px;
+        right: 12px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        transition: scale 0.3s;
+        border-radius: 8px;
+        &:active {
+            scale: 0.97;
+        }
+    }
+    &-green {
+        background-color: green;
+    }
+    &-red {
+        background-color: red;
+    }
+}
