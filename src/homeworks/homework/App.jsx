@@ -1,18 +1,14 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
-import 
 import './App.scss'
 
 export default function Todos() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const getData = () => {
-        setLoading(true)
       axios('https://jsonplaceholder.typicode.com/Todos?_limit=9')
         .then((res) => setData(res.data))
-        .finally(() => setLoading(false))
     }
     getData()
   }, [data])
@@ -39,9 +35,6 @@ export default function Todos() {
           })
         }
       </div>
-      {
-        loading ? <h1>loading...</h1> : <Todos data={data}/>
-      }
     </div>
   )
 }
