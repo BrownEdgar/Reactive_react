@@ -16,9 +16,17 @@
             position: relative;
             button{
                 position: absolute;
-                bottom: 10px;
+                top: 0;
+                right: 0;
+                background: transparent;
+                border: 0;
                 i{
-                    font-size: 40px;
+                    color: red;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        scale: 1.1;
+                    }
                 }
             }
         }
