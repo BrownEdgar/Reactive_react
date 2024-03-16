@@ -4,16 +4,14 @@ import './App.scss'
 
 export default function Todos() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const getData = () => {
       axios('https://jsonplaceholder.typicode.com/Todos?_limit=9')
         .then((res) => setData(res.data))
-        .finally(() => setLoading(false))
     }
     getData()
-  }, [data])
+  }, [])
 
   const handleDelete = (id) => {
     const result = data.filter(elem => elem.id !== id)
