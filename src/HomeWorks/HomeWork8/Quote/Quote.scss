@@ -1,0 +1,85 @@
+ @import url('https://fonts.googleapis.com/css2?family=Spirax&family=Yellowtail&display=swap');
+
+
+.Quote {
+  font-family: "Yellowtail", cursive;
+  font-weight: 700;
+  font-style: normal;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 450px);
+
+  &__likeCount {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: 0;
+    color: rgb(254, 12, 12);
+    font-size: 50px;
+    transition: 0.23s;
+    cursor: pointer;
+  
+
+    & > span {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      padding: 0.3em;
+      font-size: 18px;
+      background-color: rgb(255, 247, 0);
+      color: black;
+      border-radius: 8px;
+    }
+  }
+
+  &__holder {
+    border-image: url("https://www.transparentpng.com/thumb/border/SyrUAU-grey-border-patterned-transparent.png") 57 30 / 35px 35px / 1px round space;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 12px;
+    position: relative;
+    min-height: 280px;
+  }
+
+  &__author {
+    font-size: 25px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+
+  &__quote {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  &__quote::before {
+    content: "“";
+    font-size: 25px;
+    padding: 0.3em;
+  }
+
+    &__quote::after {
+    content: "“";
+    font-size: 25px;
+    padding: 0.3em;
+  }
+
+  &__like {
+    float: right;
+    margin: 20px;
+    background-color: transparent;
+    border: 0;
+    color: rgb(255, 173, 173);
+    font-size: 32px;
+    transition: 0.23s;
+    cursor: pointer;
+  
+
+    &-like {
+        color: rgb(254, 12, 12);
+        scale: 1.3;
+    }
+  }
+}
