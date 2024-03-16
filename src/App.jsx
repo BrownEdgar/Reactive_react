@@ -1,6 +1,5 @@
 import React from 'react'
-import Todos from './Homeworks/homework/App'
-
+import Todos from './homeworks/homework/App'
 
 export default function App() {
   return (
