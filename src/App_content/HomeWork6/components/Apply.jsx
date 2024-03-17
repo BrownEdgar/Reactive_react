@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
 import Tasks from './Todos';
 import Comments from './Comments';
 import Users from './Users';
@@ -18,10 +16,3 @@ function App() {
 }
 
 export default App;
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  )
-  
