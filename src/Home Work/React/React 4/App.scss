@@ -16,6 +16,9 @@
     align-items: center;
     color: whitesmoke;
     font-size: 24px;
+    li{
+      flex-grow: 1;
+    }
   }
   &__liststyle{
     border-radius: 12px;
@@ -33,6 +36,7 @@
     background-color: grey;
     color: whitesmoke;
     font-size: 18px;
+    margin-right: 20px;
   }
   
 }

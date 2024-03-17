@@ -8,8 +8,9 @@ export default function App() {
   // const [option, setOption] = useState('todos')
   // const [loading, setLoading] = useState(false)
 
-  const handleClick = () => {
-    setData(data.toSpliced(0))
+  const handleClick = (id) => {
+    const result = data.filter(elem => elem.id !== id)
+    setData(result)
   }
 
   useEffect(() => {
@@ -25,17 +26,17 @@ export default function App() {
     //     .finally(() => setLoading(false))
     // }
 
-  })
+  }, [])
   return (
     <div className='App'>
       {
-        data.map((elem,index)=> {
+        data.map((elem, index) => {
           return (
             <div key={elem.id}>
               <ul className='App__list'>
                 <li className='App__liststyle'>{elem.title}</li>
                 <li className='App__liststyle'>{elem.completed ? "yes" : "no"}</li>
-                <button onClick={handleClick}>Delete</button>
+                <button onClick={() => handleClick(elem.id)}>Delete</button>
               </ul>
             </div>
           )
