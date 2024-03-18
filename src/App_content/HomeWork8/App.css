@@ -1,0 +1,39 @@
+body {
+    background-image: linear-gradient(to top left, #A100FFFF, #119CFDFF);
+}
+
+.quote {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    color: whitesmoke;
+    background-color: rgb(35, 35, 35);
+    border-radius: 5px;
+}
+  
+.quote p {
+    margin-bottom: 5px;
+}
+
+.quote p:hover {
+    transition: 0.3s linear;
+    font-size: 18px;
+}
+  
+.quote button {
+    background: linear-gradient(90deg, rgba(221,12,12,1) 33%, rgba(255,85,0,1) 93%);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: #FFF;
+    font-size: 22px;
+    min-width: 50px;
+    transition: all 0.3s; 
+}
+
+.quote button.liked {
+    scale: 0.90;
+    background: linear-gradient(90deg, rgba(76,221,12,1) 27%, rgba(0,255,59,1) 93%);
+}
