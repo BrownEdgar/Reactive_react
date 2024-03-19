@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 
-import Quotes from "./components/Quotes";
+import Quotes from "./components/Quotes/Quotes";
 import "./App.scss";
 
 export default function App() {
