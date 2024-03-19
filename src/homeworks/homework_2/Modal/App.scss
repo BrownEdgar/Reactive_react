@@ -1,0 +1,32 @@
+.Modal{
+    position: fixed;
+    inset: 0 0 0 0;
+    display: grid;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    height: 100vh;
+    place-content: center;
+    z-index: 99999;
+    &__content{
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 12px;
+        text-align: center;
+        padding: 1rem 2rem;
+        width: max(30%, 500px);
+        color: green;
+    }
+    &__btn{
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 30px;
+        top: 5px;
+        right: 5px;
+        i{
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
