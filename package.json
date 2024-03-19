@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.8",
+    "boxicons": "^2.1.4",
     "classnames": "^2.5.1",
     "react": "^18.2.0",
     "react-content-loader": "^7.0.0",
