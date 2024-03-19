@@ -29,7 +29,7 @@ export default function User() {
   return (
     <div className='User'>
       {open ? <Modal closeModal ={closeModal}/> : null}
-      <h1>Comments</h1>
+      <h1 className='User__title'>Comments</h1>
       <div className='User__comments'>
         {
           data.map(elem => {
