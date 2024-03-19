@@ -1,15 +1,22 @@
 import React from 'react'
 import './Quote.scss'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 
-export default function Quote({quote}) {
+export default function Quote({ quote }) {
   return (
-    <div><h1>{title}</h1></div>
+    <div className='Quote'>
+      <span className={classNames('Quote__status', {
+        'Quote__status-white': quote.quote,
+          'Quote__status-red': !quote.quote,
+      })}>
+      </span>
+    </div>
   )
 }
 
-Quote.propTypes ={
+Quote.propTypes = {
   Quote: PropTypes.exact(
     {
       id: PropTypes.number.isRequired,
