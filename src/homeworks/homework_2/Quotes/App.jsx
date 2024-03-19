@@ -1,11 +1,11 @@
 import React from 'react'
-import 'App.scss'
-import PropTypes from 'prop-types'
 
-export default function Quotes() {
+export default function Quotes({ elem }) {
   return (
     <div>
-        
+      <pre>
+        {JSON.stringify(elem, null, 2)}
+      </pre>
     </div>
   )
 }

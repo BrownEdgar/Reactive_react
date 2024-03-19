@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import  axios  from 'axios'
+import axios from 'axios'
 import './App.scss'
 import Quotes from './Quotes/App'
 
@@ -9,9 +9,9 @@ export default function User() {
   useEffect(() => {
     const getData = () => {
       axios('https://dummyjson.com/quotes')
-      .then((res) => setData(res))
+        .then((res) => setData(res.data.quotes))
     }
-    console.log(res);
+
     getData()
   }, [])
 
@@ -19,7 +19,7 @@ export default function User() {
     <div>
       {
         data.map(elem => {
-          return <Quotes />
+          return <Quotes elem={elem} key={elem.id} />
         })
       }
     </div>
