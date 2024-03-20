@@ -23,19 +23,7 @@ export default function App() {
   return (
     <div className='App'>
       {
-        data.map(elem => {
-          return (
-            <div key={elem.id}>
-              <h1>{elem.title}</h1>
-              <button>
-                <i className='bx bx-message-minus bx-md' onClick={() => handleDelete(elem.id)}></i>
-              </button>
-            </div>
-          )
-        })
-      }
-      {
-        loading ? <PostLoader /> : <ToDos data={data}/>
+        loading ? <PostLoader /> : <ToDos data={data} handleDelete={handleDelete}/>
       }
     </div>
   )
