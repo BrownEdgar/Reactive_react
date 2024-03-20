@@ -1,0 +1,29 @@
+.Title {
+  border-radius: 16px;
+  margin: 20px auto;
+  padding: 1rem;
+  &-sm {
+    font-size: 28px;
+  }
+  &-md {
+    font-size: 32px;
+  }
+  &-lg {
+    font-size: 36px;
+  }
+  &-dark {
+    background-color: #111;
+    color: whitesmoke;
+  }
+  &-light {
+    background-color: dimgray;
+    color: white;
+  }
+  &-polo {
+    background-color: brown;
+    color: yellow;
+  }
+  &-center {
+    text-align: center !important;
+  }
+}

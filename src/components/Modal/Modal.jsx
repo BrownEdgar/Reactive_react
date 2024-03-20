@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Modal.scss'
 
-export default function Modal({ toggleModal, deletePostById }) {
+export default function Modal({ isOpen, toggleModal, children }) {
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -14,16 +14,16 @@ export default function Modal({ toggleModal, deletePostById }) {
       console.log('the end')
       window.removeEventListener('click', handleClick)
     }
-  }, [])
+  }, [isOpen])
 
-
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div className='Modal'>
       <div className="Modal__content">
-        <h1>Are you sure? </h1>
-
-        <button onClick={deletePostById}>DELETE</button>
+        {children}
       </div>
     </div>
   )
