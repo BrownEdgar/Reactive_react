@@ -1,0 +1,18 @@
+.App {
+    &__posts {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: start;
+        & > div {
+            padding: 1em;
+            border-radius: 12px;
+            color: #fff;
+            flex-basis: 30%;
+            background-image: linear-gradient(to top right, #0d9488, #042f2e);
+            h2 {
+                font-weight: 200;
+            }
+        }
+    }
+}
