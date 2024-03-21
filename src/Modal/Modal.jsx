@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.scss'
+import './Modal.scss'
 
 export default function Modal({closeModal}) {
   return (
