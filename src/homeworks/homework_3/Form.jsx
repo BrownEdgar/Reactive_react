@@ -7,28 +7,46 @@ export default function Form() {
     {
       id:1,
       username:'Ero',
-      email:'tamaryanero@gmail.com'
+      email:'tamaryanero@gmail.com',
+      password: 'Ero'
     },
     {
       id:2,
       username:'Mher',
-      email:'navasardyanmher@gmail.com'
+      email:'navasardyanmher@gmail.com',
+      password: 'Mher'
     },
     {
       id:3,
       username:'Tiko',
-      email:'tikchxrikyan@gmail.com'
+      email:'tikchxrikyan@gmail.com',
+      password: 'Tiko'
     },
     {
-      id:3,
+      id:4,
       username:'Davo',
-      email:'davidhakhinyan@gmail.com'
+      email:'davidhakhinyan@gmail.com',
+      password: 'Davo'
     }
   ])
+  const [isopen, setIsopen] = useState(false)
 
   const handleSubmit = (e) => {
-    e.target.preventDefault()
+    e.preventDefault()
+    const { email, username, password } = e.target
+    const isUserExist = users.some(elem => {
+      elem.email === email.value.toLowerCase() && 
+      elem.username === username.value.toLowerCase() &&
+      elem.password === password.value.toLowerCase()
+    })
+    if (isUserExist) {
+      toggleModal();
+    }else{
+      alert('Login error, please try again')
+    }
   }
+
+  const toggleModal = () => setIsopen(!isopen)
 
   return (
     <div className='Form'>

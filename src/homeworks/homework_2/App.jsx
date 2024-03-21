@@ -26,7 +26,15 @@ export default function User() {
 
   return (
     <div className='User'>
-      {open ? <Modal closeModal ={closeModal}/> : null}
+      {
+        open ? 
+        <Modal closeModal ={closeModal}>
+          <h1>You are welcome!</h1>
+          <button className='Modal__btn' onClick={closeModal}>
+            Close
+          </button>
+        </Modal> : null
+      }
       <h1 className='User__title'>Comments</h1>
       <div className='User__comments'>
         {
