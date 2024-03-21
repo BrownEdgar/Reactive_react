@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Modal from './Modal/App'
+import Modal from '../../Modal/App'
 import './App.scss'
 
 const DB_URL = import.meta.env.VITE_DB_URL
