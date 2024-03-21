@@ -47,15 +47,20 @@ export default function Form() {
   }
 
   const toggleModal = () => setIsopen(!isopen)
+  const closeModal = () => setIsopen(isopen)
 
   return (
     <div className='Form'>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name='username' placeholder='Username'/>
-          <input type="password" name='password' placeholder='password'/>
-          <input type="email" name='email' placeholder='Your Email'/>
-          <input type="Submit" />
-        </form>
+      <Modal isopen={isopen} toggleModal={toggleModal}>
+        <h1>You are logined</h1>
+        <button onClick={closeModal}>Ok</button>
+      </Modal>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name='username' placeholder='Username'/>
+        <input type="password" name='password' placeholder='password'/>
+        <input type="email" name='email' placeholder='Your Email'/>
+        <input type="Submit" />
+      </form>
     </div>
   )
 }
