@@ -1,0 +1,64 @@
+.Form{
+    display: flex;
+    justify-content: center;
+    form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 600px;
+        border: 1px solid white;
+        padding: 1em;
+        margin: 50px auto;
+        background-color: gray;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        h1{
+            color: whitesmoke;
+        }
+        .bxl-gmail{
+            position: absolute;
+            color: red;
+            top: 320px;
+            left: 30px;
+            font-size: 40px;
+        }
+        .bxs-lock{
+            position: absolute;
+            top: 230px;
+            left: 30px;
+            color: yellow;
+            font-size: 40px;
+        }
+        .bxs-user-circle{
+            position: absolute;
+            top: 140px;
+            left: 30px;
+            font-size: 40px;
+        }
+        input{
+            margin: 15px auto;
+            width: 80%;
+            padding: 1.3em;
+            align-items: center;
+            border-radius: 10px;
+            border: 0;
+            &:last-child{
+                width: 100px;
+                background-color: royalblue;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+                &:active{
+                    background-color: whitesmoke;
+                    color: black;
+                }
+            }
+            &:focus{
+                outline: 1px solid yellow;
+            }
+        }
+    }
+}

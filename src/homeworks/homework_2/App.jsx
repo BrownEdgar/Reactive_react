@@ -28,7 +28,7 @@ export default function User() {
     <div className='User'>
       {
         open ? 
-        <Modal closeModal ={closeModal}>
+        <Modal>
           <h1>You are welcome!</h1>
           <button className='Modal__btn' onClick={closeModal}>
             Close

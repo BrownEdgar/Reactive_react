@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Form.scss'
 import Modal from '../../Modal/Modal'
 
@@ -32,7 +32,7 @@ export default function Form() {
   const [isopen, setIsopen] = useState(false)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const { email, username, password } = e.target
     const isUserExist = users.some(elem => {
       elem.email === email.value.toLowerCase() && 
@@ -47,19 +47,26 @@ export default function Form() {
   }
 
   const toggleModal = () => setIsopen(!isopen)
-  const closeModal = () => setIsopen(isopen)
+  
 
   return (
     <div className='Form'>
-      <Modal isopen={isopen} toggleModal={toggleModal}>
-        <h1>You are logined</h1>
-        <button onClick={closeModal}>Ok</button>
-      </Modal>
+      {
+        !isopen ?
+        <Modal>
+          <h1>You are logined successfully</h1>
+          <button className='Modal__btn' onClick={toggleModal}>Ok</button>
+        </Modal>:null
+      }
       <form onSubmit={handleSubmit}>
+        <h1>Login form</h1>
+        <i class='bx bxl-gmail'></i>
         <input type="text" name='username' placeholder='Username'/>
+        <i class='bx bxs-lock'></i>
         <input type="password" name='password' placeholder='password'/>
+        <i class='bx bxs-user-circle' ></i>
         <input type="email" name='email' placeholder='Your Email'/>
-        <input type="Submit" />
+        <input type="Submit" value='Login'/>
       </form>
     </div>
   )
