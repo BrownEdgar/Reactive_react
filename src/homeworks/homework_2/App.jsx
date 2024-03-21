@@ -3,8 +3,6 @@ import axios from 'axios'
 import Modal from '../../Modal/App'
 import './App.scss'
 
-const DB_URL = import.meta.env.VITE_DB_URL
-
 export default function User() {
   const [data, setData] = useState([])
   const [open, setOpen] = useState(true)
@@ -15,7 +13,7 @@ export default function User() {
     const getData = () => {
       axios(
         {
-          baseURL: DB_URL,
+          baseURL: 'https://jsonplaceholder.typicode.com/',
           url: 'comments',
           params:{
             _limit:9
