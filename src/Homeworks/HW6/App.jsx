@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import classNames from "classnames";
+import classNames from 'classnames'
 import './App.scss'
 
 export default function App() {
