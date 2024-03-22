@@ -1,0 +1,85 @@
+.App {
+    margin: 30px auto;
+    &__title {
+        height: 40px;
+        text-align: center;
+        border-radius: 8px;
+        background-color: #777;
+    }
+    .Form {
+        width: 600px;
+        padding: 1em;
+        color: #fff;
+        margin: 20px auto;
+        border-radius: 16px;
+        border: 3px double royalblue;
+        &__group {
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            input {
+                border: 0;
+                border-radius: 12px;
+                font-size: 22px;
+                padding: 1em;
+                background: #222;
+                border-bottom: 2px solid #fff;
+                color: #fff;
+                &:focus {
+                    outline: 2px solid red;
+                    border-bottom: 0;
+                }
+                &[type="submit"] {
+                    background-color: #167d16;
+                    cursor: pointer;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    border-radius: 12px;
+                    border-bottom: 0;
+                }
+            }
+            &-password {
+                position: relative;
+                span {
+                    position: absolute;
+                    font-size: 36px;
+                    right: 20px;
+                    top: 45px;
+                    cursor: pointer;
+                    color: yellow;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    table {
+        background-color: #323232;
+        border-collapse: collapse;
+        color: #fff;
+        width: 70%;
+        margin: 0 auto;
+        caption {
+            background: hsl(0, 0%, 0%);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            th {
+                text-align: left;
+            }
+        }
+        th,
+        td,
+        caption {
+            padding: 1rem;
+            text-align: left;
+        }
+        td {
+            background: hsl(0, 0%, 0% / 0.5);
+        }
+        tr:nth-of-type(2n) {
+            background: hsl(0, 0%, 0% / 0.1);
+        }
+    }
+}
