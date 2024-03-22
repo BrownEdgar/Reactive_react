@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import classNames from 'classNames';
 import './App.scss'
 import Modal from './Modal/Modal'
-import FirstModal from './FirstModal/App'
+import Modal2 from './Modal2/Modal2'
 
 const DB_URL = import.meta.env.VITE_DB_URL
 
@@ -37,7 +37,7 @@ export default function App() {
   return (
     <div className='App'>
       {
-        modal ? <FirstModal handleClickCancel={handleClickCancel} handleClickOk={handleClickOk} /> : null
+        modal ? <Modal2 handleClickCancel={handleClickCancel} handleClickOk={handleClickOk} /> : null
       }
       {
         isOpen ? <Modal toggleModal={toggleModal} deletePostById={deletePostById}/> : null
