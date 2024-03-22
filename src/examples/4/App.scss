@@ -1,0 +1,83 @@
+body {
+  background-color: #1d1d1d;
+}
+
+.App {
+  margin: 30px auto;
+  .form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 1em;
+    border-radius: 16px;
+    border: 3px double royalblue;
+    color: #fff;
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+      input {
+        font-size: 20px;
+        padding: 1em;
+        background: #333;
+        border: 0;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        transition: 0.1s;
+        &:focus {
+          outline: 2px solid orangered;
+          border-bottom: 0;
+        }
+        &[type="submit"] {
+          background-color: #167d16;
+          border-bottom: 0;
+          border-radius: 12px;
+          cursor: pointer;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+        }
+      }
+      &-password {
+        position: relative;
+        span {
+          position: absolute;
+          font-size: 36px;
+          right: 20px;
+          top: 45px;
+          cursor: pointer;
+          color: yellow;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  table {
+    background-color: #323232;
+    border-collapse: collapse;
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    caption {
+      background: hsl(0 0% 0%);
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      th {
+        text-align: left;
+      }
+    }
+    th,
+    td,
+    caption {
+      padding: 1rem;
+      text-align: left;
+    }
+    th {
+      background: hsl(0 0% 0% / 0.5);
+    }
+    tr:nth-of-type(2n) {
+      background: hsl(0 0% 0% / 0.1);
+    }
+  }
+}
