@@ -29,14 +29,15 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { email, username, password } = e.target
+    const { email, username } = e.target
     const isUserExist = users.some(elem => {
-      elem.email === email.value.toLowerCase() 
+      return(elem.email === email.value.toLowerCase() &&
+      elem.username === username.value.toLowerCase())
     })
     if (isUserExist) {
-      toggleModal();
-    }else{
       alert('Login error, please try again')
+    }else{
+      toggleModal();
     }
   }
 
