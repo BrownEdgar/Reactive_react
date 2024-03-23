@@ -54,7 +54,7 @@ export default function App() {
           </button>
         </div>
       </form>
-      <hr />
+      
       <table>
         <caption>USERS DATA</caption>
         <thead>
