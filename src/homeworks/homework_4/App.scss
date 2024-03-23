@@ -44,6 +44,9 @@ body{
       	  right: 20px;
       	  top: 43px;
       	  font-size: 28px;
+					i{
+						cursor: pointer;
+					}
       	}
       }
     }
@@ -84,6 +87,27 @@ body{
         left: 45px;
         font-size: 25px;
       }
+    }
+  }
+	table{
+    font-size: 30px;
+    margin: 50px auto;
+    caption{
+      font-weight: 700;
+      font-size: 40px;
+    }
+    th{
+      text-align: center;
+      border-top: 3px solid grey;
+      border-bottom: 3px solid grey;
+      width: 400px;
+      padding-block: 20px;
+      font-weight: 900;
+    }
+    td{
+      border-bottom: 1px solid gray;
+      padding-block: 20px;
+      text-align: center
     }
   }
 }
