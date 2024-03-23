@@ -13,6 +13,11 @@ body {
   margin: 0 auto;
   padding-inline: 30px;
   background-color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 a {
