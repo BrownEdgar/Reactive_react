@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.scss'
 import Modal from './Modal/Modal'
 
-export default function App() {
+export default function App({toggleModal}) {
   const [data, setData] = useState([])
   const [isOpen, setIsOpen] = useState(false)
 
