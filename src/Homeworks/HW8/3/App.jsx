@@ -6,12 +6,13 @@ export default function App() {
   const [users, setUsers] = useState([])
   const handleSubmit = (e) => {
     e.preventDefault()
-    const user = e.target.username.value.toLowerCase()
-    if (users.includes(user)) {
-      alert('try again')
-    } else {
-      setUsers([...users, user])
+    const {username, password, email} = e.target
+    const user = {
+      username: username.value,
+      password: password.value,
+      email: email.value
     }
+    setUsers([...users, user])
   }
   return (
     <div className='App'>
