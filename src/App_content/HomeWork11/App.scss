@@ -1,0 +1,115 @@
+.App__content {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+
+.App {
+    margin: 30px auto;
+    &__text {
+        font-size: 24px;
+        color: black;
+        line-height: 70px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700;
+    }
+    &__buttons {
+        position: absolute;
+        left: 19%;
+    }
+    .Form {
+        width: 600px;
+        padding: 1em;
+        color: #fff;
+        margin: 20px auto;
+        border-radius: 16px;
+        &__group {
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            input {
+                border: 0;
+                border-radius: 6px;
+                border: 1px solid grey;
+                font-size: 22px;
+                padding: 30px;
+                color: #333;
+                &:focus {
+                    outline: 2px solid red;
+                    border-bottom: 0;
+                    box-shadow: 10px 10px 30px;
+                    transition: all 0.5s;
+                }
+                &[type="submit"] {
+                    background-color: #19c019;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: #fff;
+                    letter-spacing: 5px;
+                    border-radius: 50px;
+                    border-bottom: 0;
+                }
+            }
+            &-password {
+                position: relative;
+                span {
+                    position: absolute;
+                    font-size: 36px;
+                    right: 20px;
+                    top: 24px;
+                    cursor: pointer;
+                    color: black;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+.App__btn-facebook {
+    color: rgb(23, 23, 167);
+    position: relative;
+    font-size: 30px;
+}
+
+.App__btn-google {
+    color: rgb(124, 129, 63);
+    position: relative;
+    font-size: 30px;
+    float: right;
+}
+
+.fa-square-facebook {
+    position: absolute;
+    top: 16px;
+    left: 32px;
+}
+.fa-google {
+    position: absolute;
+    top: 16px;
+    left: 44px;
+}
+
+#facebook {
+    padding: 10px;
+    width: 400px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+#google {
+    padding: 10px;
+    width: 400px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
