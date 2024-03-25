@@ -12,7 +12,7 @@
         color: #fff;
         margin: 20px auto;
         border-radius: 16px;
-        border: 3px double royalblue;
+        border: 3px double #167d16;
         &__group {
             gap: 10px;
             display: flex;
@@ -48,7 +48,7 @@
                     right: 20px;
                     top: 45px;
                     cursor: pointer;
-                    color: yellow;
+                    color: rgb(255, 255, 255);
                     line-height: 1;
                 }
             }
