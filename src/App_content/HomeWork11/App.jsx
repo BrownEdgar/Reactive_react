@@ -54,17 +54,21 @@ function App() {
                     <div className='App__buttons'>
                         <div className='App__btn-facebook'>
                             <span>
-                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-square-facebook">
+                                    <a className='face' href="https://www.facebook.com/r.php">Facebook link</a>
+                                </i>
                             </span>
                             <input type="submit" id="facebook"  value="Log in with Facebook"/>
                         </div>
                         <div className="App__btn-google">
                             <span>
-                                <i class="fa-brands fa-google"></i>
+                                <i class="fa-brands fa-google">
+                                    <a className='goog' href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://myaccount.google.com?utm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&ddm=0&dsh=S285400348:1711350912131542&flowEntry=SignUp&flowName=GlifWebSignIn&theme=mn&TL=AEzbmxym5atu50PeSwYtlfjkTAn0eq5qUvmgKD6nsrOoz2WZ-ufXPevOb2lW9LoL">Google link</a>
+                                </i>
                             </span>
                             <input type="submit" id="google" value="Log in with Google" />
                         </div>
-                </div>
+                    </div>
                 </form>
             </div>
         </div>

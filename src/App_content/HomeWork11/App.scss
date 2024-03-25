@@ -82,13 +82,13 @@
 
 .fa-square-facebook {
     position: absolute;
-    top: 16px;
-    left: 32px;
+    top: 10px;
+    left: 30px;
 }
 .fa-google {
     position: absolute;
-    top: 16px;
-    left: 44px;
+    top: 6px;
+    left: 42px;
 }
 
 #facebook {
@@ -114,4 +114,14 @@
     border: 1px solid grey;
     cursor: pointer;
     box-shadow: 6px 6px 14px yellow;
+}
+
+.face {
+    opacity: 0;
+    font-size: 38px;
+}
+
+.goog {
+    opacity: 0;
+    font-size: 42px;
 }
