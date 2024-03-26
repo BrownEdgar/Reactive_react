@@ -92,7 +92,7 @@ body{
 	table{
     font-size: 30px;
     margin: 50px auto;
-		color: #fff                 ;
+		color: #fff;                 ;
     caption{
       font-weight: 700;
       font-size: 40px;
@@ -108,7 +108,24 @@ body{
     td{
       border-bottom: 1px solid gray;
       padding-block: 20px;
-      text-align: center
+      text-align: center;
+      &.password{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+          font-size: 30px;
+          color: yellow;
+          cursor: pointer;
+        }
+      }
+      &.delete{
+        color: red;
+        i{
+          cursor: pointer;
+          font-size: 30px;
+        }
+      }
     }
   }
 }

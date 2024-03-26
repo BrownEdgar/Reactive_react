@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.scss'
 import { nanoid } from 'nanoid'
 
 export default function App() {
   const [isopen, setIsopen] = useState(false)
   const [users, setUsers] = useState([])
+  const [userId, setUserId] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -19,6 +20,15 @@ export default function App() {
 
   const togglePassword = () => {
     setIsopen(!isopen)
+  }
+
+  const handleRemove = (id) => {
+    const result = users.filter(elem => elem.id !== id)
+    setUsers(result)
+  }
+
+  const handlePassword = (currentId) => {
+    setUserId( currentId === userId ? null : currentId )
   }
 
   return (
@@ -71,9 +81,12 @@ export default function App() {
               <tr key={elem.id}>
                 <td>{elem.id}</td>
                 <td>{elem.email}</td>
-                <td>{elem.password}</td>
-                <td>
-                  <i className="bi bi-trash-fill" onClick={handleRemove}></i>
+                <td className='password'>
+                  {(userId === elem.id) ? elem.password : '*'.repeat(7)}
+                  <i className={`bi ${userId == elem.id ? "bi-eye-slash" : "bi-eye-fill"} )`} onClick={() => handlePassword(elem.id)}></i>
+                </td>
+                <td className='delete'>
+                  <i className="bi bi-trash-fill" onClick={() => handleRemove(elem.id)}></i>
                 </td>
               </tr>
             )

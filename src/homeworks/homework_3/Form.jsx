@@ -31,13 +31,18 @@ export default function Form() {
     e.preventDefault();
     const { email, username } = e.target
     const isUserExist = users.some(elem => {
-      return(elem.email === email.value.toLowerCase() &&
-      elem.username === username.value.toLowerCase())
+      return(elem.email === email.value.toLowerCase())
     })
     if (isUserExist) {
       alert('Login error, please try again')
     }else{
       toggleModal();
+      const user = {
+        id: nanoid(5),
+        email: email.value,
+        username: username.value
+      }
+      setUsers([...users, user])
     }
   }
 
