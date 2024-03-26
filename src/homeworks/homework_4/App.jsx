@@ -27,13 +27,13 @@ export default function App() {
         <h1>Logging in</h1>
         <div className="form__group">
           <label htmlFor="email">Email</label>
-          <input type="email" placeholder='Email *' id='email'/>
+          <input type="email" placeholder='Email *' id='email' required/>
         </div>
         <div className="form__group form__group-password">
           <label htmlFor="password">Password</label>
-          <input type={`${togglePassword ? "text" : "password"}`} placeholder='Password *' id='password'/>
+          <input type={`${isopen ? "text" : "password"}`} placeholder='Password *' id='password' required/>
           <span>
-            <i className={`bi ${togglePassword ? "bi-eye-slash" : "bi-eye-fill"}`} onClick={togglePassword}></i>
+            <i className={`bi ${isopen ? "bi-eye-slash" : "bi-eye-fill"}`} onClick={togglePassword}></i>
           </span>
         </div>
         <span>
@@ -62,6 +62,7 @@ export default function App() {
             <th>ID</th>
             <th>Email</th>
             <th>Password</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -71,6 +72,9 @@ export default function App() {
                 <td>{elem.id}</td>
                 <td>{elem.email}</td>
                 <td>{elem.password}</td>
+                <td>
+                  <i className="bi bi-trash-fill" onClick={handleRemove}></i>
+                </td>
               </tr>
             )
           })}
