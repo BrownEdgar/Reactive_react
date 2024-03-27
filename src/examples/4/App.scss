@@ -79,5 +79,28 @@ body {
     tr:nth-of-type(2n) {
       background: hsl(0 0% 0% / 0.1);
     }
+    td {
+      i {
+        cursor: pointer;
+      }
+      &.delete {
+        text-align: center;
+        i {
+          color: #ff0404;
+          font-size: 24px;
+        }
+      }
+      &.password {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        max-width: 280px;
+        i {
+          color: yellow;
+          font-size: 24px;
+        }
+      }
+    }
   }
 }
