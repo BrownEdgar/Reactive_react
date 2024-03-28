@@ -46,31 +46,34 @@ export default function App() {
       validationSchema={validationSchema}
       >
         <Form>
-          <label htmlFor="Name">Name</label>
-          <div className='App__name'>
-            <Field type="text" placeholder="First name" name="firstName" />
-            <ErrorMessage name="firstName" component='p' className='error' />
-            <Field type="text" placeholder="Last name" name="lastName" />
-            <ErrorMessage name="lastName" component='p' className='error' />
-          </div>
-          <label htmlFor="Address">Address</label>
-          <div className='App__address'>
-            <Field type="text" placeholder="Street name" name="streetName" />
-            <ErrorMessage name="streetName" component='p' className='error' />
-            <Field type="text" placeholder="Postal code" name="postalCode" />
-            <ErrorMessage name="postalCode" component='p' className='error' />
-            <Field type="text" placeholder="State" name="state" />
-            <ErrorMessage name="state" component='p' className='error' />
-            <Field type="text" placeholder="Number" name="number" />
-            <ErrorMessage name="number" component='p' className='error' />
-            <Field type="text" placeholder="City" name="city" />
-            <ErrorMessage name="city" component='p' className='error' />
-            <Field as="select" name="country">
-              {countries.map(elem => {
-                return <option value={elem} key={elem}>{elem}</option>
-              })}
-            </Field>
-            <input type='submit' value="add" />
+          <h1>Data logging</h1>
+          <div className="form">
+            <div className='form__name'>
+              <label htmlFor="Name">Name</label>
+              <Field type="text" placeholder="First name" name="firstName" />
+              <ErrorMessage name="firstName" component='p' className='error' />
+              <Field type="text" placeholder="Last name" name="lastName" />
+              <ErrorMessage name="lastName" component='p' className='error' />
+            </div>
+            <div className='form__address'>
+              <label htmlFor="Address">Address</label>
+              <Field type="text" placeholder="Street name" name="streetName" />
+              <ErrorMessage name="streetName" component='p' className='error' />
+              <Field type="text" placeholder="Postal code" name="postalCode" />
+              <ErrorMessage name="postalCode" component='p' className='error' />
+              <Field type="text" placeholder="State" name="state" />
+              <ErrorMessage name="state" component='p' className='error' />
+              <Field type="text" placeholder="Number" name="number" />
+              <ErrorMessage name="number" component='p' className='error' />
+              <Field type="text" placeholder="City" name="city" />
+              <ErrorMessage name="city" component='p' className='error' />
+              <Field as="select" name="country" className="select">
+                {countries.map(elem => {
+                  return <option value={elem} key={elem}>{elem}</option>
+                })}
+              </Field>
+              <input type='submit' value="Add" />
+            </div>
           </div>
         </Form>
       </Formik>

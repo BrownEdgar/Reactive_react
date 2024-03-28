@@ -1,6 +1,94 @@
+body{
+	background: rgb(0,82,255);
+	background: linear-gradient(329deg, rgba(0,82,255,1) 0%, rgba(0,219,255,1) 100%);
+}
+
 .App{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 50px auto;
-	Formik{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	h1{
+		font-size: 36px;
+		color: rgb(255, 221, 0);
+		font-weight: 900;
+	}
+	.form{
+		margin: auto;
+		width: 500px;
 		padding: 2em;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		label{
+			color: #fff;
+			font-size: 26px;
+			font-weight: 900;
+		}
+		input{
+			width: 100%;
+			border-radius: 5px;
+			padding: 1em;
+			margin-top: 12px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+			&[type="submit"]{
+				background-color: red;
+				border-radius: 15px;
+				color: #fff;
+			}
+		}
+		.error{
+			background-color: red;
+			color: #fff;
+			padding: 0.6rem 1rem;
+			border-radius:  0 0 15px 15px;
+			margin-top: 0;
+		}
+		.select{
+			width: 100%;
+			padding: 0.7em;
+			margin-top: 10px;
+			text-align: center;
+
+		}
+	}
+	table{
+		font-size: 30px;
+		margin: 50px auto;
+		border-collapse: collapse;               
+		th{
+			text-align: center;
+			border: 3px solid grey;
+			border: 3px solid grey;
+			width: 400px;
+			padding-block: 20px;
+			font-weight: 900;
+			background-color: black;
+			color: #fff;
+		}
+		td{
+			border: 1px solid gray;
+			padding-block: 20px;
+			text-align: center;
+			background-color: #fff;
+			&.password{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				i{
+					font-size: 30px;
+					color: yellow;
+					cursor: pointer;
+				}
+			}
+			&.delete{
+				color: red;
+				i{
+					cursor: pointer;
+					font-size: 30px;
+				}
+			}
+		}
 	}
 }
