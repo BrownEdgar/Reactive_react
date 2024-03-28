@@ -35,6 +35,7 @@ export default function App() {
                 })
               }
             </Field>
+            <input type="submit" className='App__submit' />
           </div>
 
         </Form>
