@@ -25,13 +25,46 @@
       border-radius: 14px;
       border: 0;
     }
-    button {
+    &__face-btn {
       display: block;
       margin: 0 auto;
       margin-bottom: 10px;
-      width: 70%;
+      width: 60%;
       border: 1px solid black;
       border-radius: 12px;
+      padding: 0.6em 1em;
+      position: relative;
+      & > button {
+        border: 0;
+        background: transparent;
+        & > i {
+          position: absolute;
+          left: 23%;
+          top: 29%;
+          font-size: 22px;
+          color: blue;
+        }
+      }
+    }
+    &__google-btn {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      width: 60%;
+      border: 1px solid black;
+      border-radius: 12px;
+      padding: 0.6em 1em;
+      position: relative;
+      & > button {
+        border: 0;
+        background: transparent;
+        & > i {
+          position: absolute;
+          left: 25%;
+          top: 28%;
+          font-size: 22px;
+        }
+      }
     }
     &__a {
       display: block;

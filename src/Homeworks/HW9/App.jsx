@@ -24,11 +24,6 @@ export default function App() {
     setUsers(users.toSpliced(index, 1))
   }  
 
-  // const facebookClick = () => {
-  //   setOpenFace(openFace)
-  // }
-
-
   return (
     <div className='App'>
       <form className='Form' onSubmit={handleSubmit}>
@@ -46,17 +41,18 @@ export default function App() {
           <input type="submit" value='Log in' />
         </div>
         <div className='Form__btn'>
-          <button className='Form__btn1'>
-            <i className="bi bi-facebook"></i>
-            {/* {
-              setOpenFace ? null : 
-            } */}
-            <p><a href="https://www.facebook.com/">Log in with Facebook</a></p>
-          </button>
-          <button className='Form__btn2'>
-            <i className="bi bi-google"></i>
-            <p><a href="https://www.google.com/intl/ru/gmail/about/">Log in with Google</a></p>
-          </button>
+          <a href="https://www.facebook.com/" target='_blank' className='Form__face-btn'>
+            <button>
+              <i className="bi bi-facebook"></i>
+              <p>Log in with Facebook</p>
+            </button>
+          </a>
+          <a href="https://www.google.com/intl/ru/gmail/about/" target='_blank' className='Form__google-btn'>
+            <button>
+              <i className="bi bi-google"></i>
+              <p>Log in with Google</p>
+            </button>
+          </a>
         </div>
       </form>
       <table>
