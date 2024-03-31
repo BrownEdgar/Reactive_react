@@ -11,7 +11,8 @@ const validationSchema = object({
   postalCode: string().matches(/[0-9]/, "must be only numbers").required(),
   state: string().matches(/^[A-Z]/, "must start with uppercase").required(),
   number: string().matches(/[0-9]/, "must be only numbers").required(),
-  city: string().matches(/^[A-Z]/, "must start with uppercase").required()
+  city: string().matches(/^[A-Z]/, "must start with uppercase").required(),
+  floorOrUnit: string().required()
 })
 
 const countries = ["Japan", "USA", "France", "Germany", "Russia"]
@@ -40,7 +41,8 @@ export default function App() {
           postal_code: '',
           state: '',
           number: '',
-          city: ''
+          city: '',
+          floorOrUnit: ''
         }
       }
       validationSchema={validationSchema}
@@ -62,40 +64,43 @@ export default function App() {
             <div className="form__address">
               <div className="form__row">
                 <div className="streetName">
-                    <Field type="text" name="address.street" placeholder="Street name"  required />
-                    <ErrorMessage name="address.street" component="p" className='form__error' />
-                </div>
-                      
+                  <label htmlFor="Address">Address</label>
+                  <Field type="text" name="streetName" placeholder="Street name"  required />
+                  <ErrorMessage name="streetName" component="p" className='error' />
+                </div>    
                 <div className="number">
-                    <Field type="text" name="address.number" placeholder="number"  required />
-                    <ErrorMessage name="address.number" component="p" className='form__error'/>
+                  <Field type="text" name="number" placeholder="number"  required />
+                  <ErrorMessage name="number" component="p" className='error'/>
                 </div>
-      
                 <div className="floorOrUnit">
-                    <Field type="text" name="address.floorOrUnit" placeholder="Floor, unit,.." />
-                    <ErrorMessage name="address.floorOrUnit" component="p" className='form__error'/>
+                  <Field type="text" name="floorOrUnit" placeholder="Floor, unit,.." />
+                  <ErrorMessage name="floorOrUnit" component="p" className='error'/>
                 </div>
               </div>
               <div className="form__row">
                 <div>
-                    <Field type="text" name="address.postalCode" placeholder="Postal code" required />
-                    <ErrorMessage name="address.postalCode" component="p" className='form__error'/>
-                </div>
-                      
+                  <Field type="text" name="postalCode" placeholder="Postal code" required />
+                  <ErrorMessage name="postalCode" component="p" className='error'/>
+                </div>  
                 <div>
-                    <Field type="text" name="address.city" placeholder="city" required />
-                    <ErrorMessage name="address.city" component="p" className='form__error'/>
+                  <Field type="text" name="city" placeholder="city" required />
+                  <ErrorMessage name="city" component="p" className='error'/>
                 </div>
               </div>
               <div className="form__row">
                 <div>
-                    <Field type="text" name="address.state" placeholder="State" required />
-                    <ErrorMessage name="address.state" component="p" className='form__error'/>
-                </div>
-                      
+                  <Field type="text" name="state" placeholder="State" required />
+                  <ErrorMessage name="state" component="p" className='error'/>
+                </div>   
                 <div>
-                    <Field type="text" name="address.country" placeholder="Country" required />
-                    <ErrorMessage name="address.country" component="p" className='form__error'/>
+                  <Field as="select" name="countries" className="select" placeholder="Country" required>
+                    {countries.map(elem => {
+                      return(
+                        <option value={elem} key={elem}>{elem}</option>
+                      )
+                    })}
+                  </Field>
+                  <ErrorMessage name="country" component="p" className='error'/>
                 </div>
               </div>
             </div>
