@@ -7,7 +7,26 @@ import './App.scss'
 export default function App() {
   return (
     <div className='App'>
-      <Formik></Formik>
+      <Formik
+      onSubmit={handleSubmit}
+      validationSchema={validationSchema}
+      initialValues={ 
+        { 
+          email: '',
+          username: '',
+          password: ''
+        }
+      }
+      >
+        {(formik) => (
+          <Form>
+            <div className="form__email">
+              <Field type="email" name="email" placeholder="Email" />
+              <ErrorMessage name="email" className="error" component="p" />
+            </div>
+          </Form>
+        )}
+      </Formik>
     </div>
   )
 }
