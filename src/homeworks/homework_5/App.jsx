@@ -19,7 +19,7 @@ const countries = ["Japan", "USA", "France", "Germany", "Russia"]
 export default function App() {
   const [persons, setPersons] = useState([])
 
-  const handleSubmit = (formik, value) => {
+  const handleSubmit = (value, formik) => {
     const person = {
       id: nanoid(4),
       ...value
@@ -49,31 +49,51 @@ export default function App() {
           <h1>Data logging</h1>
           <div className="form">
             <div className='form__name'>
-              <label htmlFor="Name">Name</label>
-              <Field type="text" placeholder="First name" name="firstName" />
-              <ErrorMessage name="firstName" component='p' className='error' />
-              <Field type="text" placeholder="Last name" name="lastName" />
-              <ErrorMessage name="lastName" component='p' className='error' />
+              <div>
+                <label htmlFor="Name">Name</label>
+                <Field type="text" placeholder="First name" name="firstName" />
+                <ErrorMessage name="firstName" component='p' className='error' />
+              </div>
+              <div>
+                <Field type="text" placeholder="Last name" name="lastName" />
+                <ErrorMessage name="lastName" component='p' className='error' />
+              </div>
             </div>
             <div className='form__address'>
-              <label htmlFor="Address">Address</label>
-              <Field type="text" placeholder="Street name" name="streetName" />
-              <ErrorMessage name="streetName" component='p' className='error' />
-              <Field type="text" placeholder="Postal code" name="postalCode" />
-              <ErrorMessage name="postalCode" component='p' className='error' />
-              <Field type="text" placeholder="State" name="state" />
-              <ErrorMessage name="state" component='p' className='error' />
-              <Field type="text" placeholder="Number" name="number" />
-              <ErrorMessage name="number" component='p' className='error' />
-              <Field type="text" placeholder="City" name="city" />
-              <ErrorMessage name="city" component='p' className='error' />
-              <Field as="select" name="country" className="select">
-                {countries.map(elem => {
-                  return <option value={elem} key={elem}>{elem}</option>
-                })}
-              </Field>
-              <input type='submit' value="Add" />
+              <div>
+                <label htmlFor="Address">Address</label>
+                <Field type="text" placeholder="Street name" name="streetName" />
+                <ErrorMessage name="streetName" component='p' className='error' />
+              </div>
+              <div>
+                <Field type="text" placeholder="Postal code" name="postalCode" />
+                <ErrorMessage name="postalCode" component='p' className='error' />
+              </div>
             </div>
+            <div className='form__address'>
+              <div>
+                <Field type="text" placeholder="State" name="state" />
+                <ErrorMessage name="state" component='p' className='error' />
+              </div>
+              <div>
+                <Field type="text" placeholder="Number" name="number" />
+                <ErrorMessage name="number" component='p' className='error' />
+              </div>
+            </div>
+            <div className="form__address">
+              <div>
+                <Field type="text" placeholder="City" name="city" />
+                <ErrorMessage name="city" component='p' className='error' />
+              </div>
+              <div>
+                <Field as="select" name="country" className="select">
+                  {countries.map(elem => {
+                    return <option value={elem} key={elem}>{elem}</option>
+                  })}
+                </Field>
+              </div>
+            </div>
+            <input type='submit' value="Add" />
           </div>
         </Form>
       </Formik>
