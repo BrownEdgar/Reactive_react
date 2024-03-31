@@ -59,38 +59,44 @@ export default function App() {
                 <ErrorMessage name="lastName" component='p' className='error' />
               </div>
             </div>
-            <div className='form__address'>
-              <div>
-                <label htmlFor="Address">Address</label>
-                <Field type="text" placeholder="Street name" name="streetName" />
-                <ErrorMessage name="streetName" component='p' className='error' />
-              </div>
-              <div>
-                <Field type="text" placeholder="Postal code" name="postalCode" />
-                <ErrorMessage name="postalCode" component='p' className='error' />
-              </div>
-            </div>
-            <div className='form__address'>
-              <div>
-                <Field type="text" placeholder="State" name="state" />
-                <ErrorMessage name="state" component='p' className='error' />
-              </div>
-              <div>
-                <Field type="text" placeholder="Number" name="number" />
-                <ErrorMessage name="number" component='p' className='error' />
-              </div>
-            </div>
             <div className="form__address">
-              <div>
-                <Field type="text" placeholder="City" name="city" />
-                <ErrorMessage name="city" component='p' className='error' />
+              <div className="form__row">
+                <div className="streetName">
+                    <Field type="text" name="address.street" placeholder="Street name"  required />
+                    <ErrorMessage name="address.street" component="p" className='form__error' />
+                </div>
+                      
+                <div className="number">
+                    <Field type="text" name="address.number" placeholder="number"  required />
+                    <ErrorMessage name="address.number" component="p" className='form__error'/>
+                </div>
+      
+                <div className="floorOrUnit">
+                    <Field type="text" name="address.floorOrUnit" placeholder="Floor, unit,.." />
+                    <ErrorMessage name="address.floorOrUnit" component="p" className='form__error'/>
+                </div>
               </div>
-              <div>
-                <Field as="select" name="country" className="select">
-                  {countries.map(elem => {
-                    return <option value={elem} key={elem}>{elem}</option>
-                  })}
-                </Field>
+              <div className="form__row">
+                <div>
+                    <Field type="text" name="address.postalCode" placeholder="Postal code" required />
+                    <ErrorMessage name="address.postalCode" component="p" className='form__error'/>
+                </div>
+                      
+                <div>
+                    <Field type="text" name="address.city" placeholder="city" required />
+                    <ErrorMessage name="address.city" component="p" className='form__error'/>
+                </div>
+              </div>
+              <div className="form__row">
+                <div>
+                    <Field type="text" name="address.state" placeholder="State" required />
+                    <ErrorMessage name="address.state" component="p" className='form__error'/>
+                </div>
+                      
+                <div>
+                    <Field type="text" name="address.country" placeholder="Country" required />
+                    <ErrorMessage name="address.country" component="p" className='form__error'/>
+                </div>
               </div>
             </div>
             <input type='submit' value="Add" />
