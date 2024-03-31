@@ -41,21 +41,23 @@ body{
 			margin-top: 0;
 		}
   }
-  .data__info{
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    background-color: #fff;
-    margin: 20px auto;
-    width: 300px;
-    border-radius: 20px;
-		border: 0;
-    padding: 1em;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  }
-  .data__saved{
-    background-color: aqua;
-    border: 3px ;
+  .data{
+    &__info{
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      background-color: #fff;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 20px;
+      border: 0;
+      padding: 1em;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    &__saved{
+      background-color: aqua;
+      border: 3px ;
+    }
   }
 }  
     
