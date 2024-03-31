@@ -1,0 +1,23 @@
+.Users {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 12px;
+
+  &__group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__border {
+    display: inline-block;
+    padding: 1em;
+    background-color: cyan;
+    border: 2px dashed rgb(50, 115, 255);
+    border-radius: 12px;
+  }
+}
