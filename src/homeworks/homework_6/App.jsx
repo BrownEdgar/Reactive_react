@@ -85,7 +85,7 @@ export default function App() {
               <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
               <i 
               className={`bi ${isOpen && currentIndex === index ? "bi-eye-fill" : "bi-eye-slash-fill"}`}
-              onClick={togglePassword}
+              onClick={togglePassword(index)}
               ></i>
             </div>
           </div>
