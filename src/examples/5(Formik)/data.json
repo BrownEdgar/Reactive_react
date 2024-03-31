@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "username": "Spartak",
+    "email": "spo.hakobyan@gmail.com",
+    "language": "react"
+  },
+  {
+    "id": 2,
+    "username": "Vahag",
+    "email": "vahag.nazaryan@gmail.com",
+    "language": "react"
+  },
+  {
+    "id": 3,
+    "username": "Narek",
+    "email": "narek.ghazaryan@gmail.com",
+    "language": "javascript"
+  },
+  {
+    "id": 4,
+    "username": "Rafayel",
+    "email": "Rafayel.avetyan@gmail.com",
+    "language": "css"
+  },
+  {
+    "id": 5,
+    "username": "Sergey",
+    "email": "Sergey.hakobyan@gmail.com",
+    "language": "html"
+  },
+  {
+    "id": 6,
+    "username": "Ero",
+    "email": "Ero.tamaryan@gmail.com",
+    "language": "node"
+  }
+]

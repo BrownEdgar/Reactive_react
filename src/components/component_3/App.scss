@@ -1,0 +1,35 @@
+.Users{
+    margin: 50px auto;
+    &__title{
+        font-weight: 800;
+        font-size: 45px;
+        color: #10bb24;
+    }
+    &__body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        div {
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 10px solid #10bb24;
+            position: relative;
+            color: #10bb24;
+            button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: transparent;
+                border: 0;
+                i{
+                    color: red;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+        }
+    }
+}

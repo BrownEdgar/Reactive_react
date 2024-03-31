@@ -1,0 +1,12 @@
+.todos {
+		&__container {
+         margin-block: 30px;
+		}
+
+		&__body {
+         display: grid;
+         grid-template-columns: repeat(3, minmax(350px, 33.333%));
+         grid-auto-rows: minmax(100px, 140px);
+         gap: 25px;
+		}
+}

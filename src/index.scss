@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,regular,500,600,700,800,900);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 30px;
+  background-color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+._container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 30px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+}

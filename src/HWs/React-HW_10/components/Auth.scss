@@ -1,0 +1,143 @@
+.auth {
+  min-width: 500px;
+  background-color: rgba(128, 128, 128, 0.178);
+  padding: 3rem 2.5rem;
+  box-sizing: content-box;
+  border-radius: 24px;
+  border-bottom: 5px solid rgba(81, 255, 0, 0.1);
+  border-right: 5px solid rgba(81, 255, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(81, 255, 0, 0.1);
+  backdrop-filter: blur(40px);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.form-auth {
+  &__group {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+
+    > input {
+      padding: 1.2rem 1rem;
+      width: 100%;
+      background-color: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 8px;
+      color: whitesmoke;
+      font-weight: 700;
+      font-size: 0.9rem;
+
+      &::placeholder {
+        color: rgba(245, 245, 245, 0.509);
+      }
+
+      &:focus {
+        outline: 2px solid rgba(255, 255, 159, 0.6);
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  //   &__email {
+  //   }
+
+  &__password {
+    position: relative;
+
+    > img {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      right: 15px;
+      top: 13px;
+      cursor: pointer;
+    }
+  }
+
+  //   &__password-input {
+  //   }
+
+  &__helper {
+    margin-block: 30px;
+    font-weight: 500;
+
+    > a {
+      color: whitesmoke;
+      cursor: pointer;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: whitesmoke;
+    }
+  }
+
+  &__login-btn {
+    padding: 1rem 0.5rem;
+    border-radius: 32px;
+    border: none;
+    background-color: #00856f;
+
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #333 inset;
+    transition: all 0.23s ease 0s;
+
+    &:hover {
+      box-shadow: 0px 0px 20px #333 inset;
+    }
+  }
+
+  &__other {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    row-gap: 10px;
+    margin-top: 30px;
+
+    & > div {
+      border-radius: 32px;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      min-width: 300px;
+      padding-block: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      cursor: pointer;
+      transition: all 0.23s ease 0s;
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.15);
+      }
+
+      & > a {
+        color: whitesmoke;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.other-form-auth {
+  &__facebook {
+    > img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__google {
+    > img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.App {
+  margin: 30px;
+  .Form {
+    width: 600px;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    input {
+      width: 100%;
+      margin: 10px auto;
+      margin-bottom: 10px;
+      padding: 1em;
+      font-size: 18px;
+      border: 1px solid black;
+    }
+    input[type = 'submit'] {
+      background-color: #34CC61;
+      color: white;
+      width: 80%;
+      border-radius: 14px;
+      border: 0;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      width: 70%;
+      border: 1px solid black;
+      border-radius: 12px;
+    }
+    &__a {
+      display: block;
+      & > a {
+        float: left;
+      }
+    }
+    &__password {
+      position: relative;
+      & > i {
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        font-size: 22px;
+      }
+    }
+    &__btn1 {
+      position: relative;
+      & > i {
+        position: absolute;
+        left: 26%;
+        top: 23%;
+        font-size: 22px;
+        color: blue;
+      }
+    }
+    &__btn2 {
+      position: relative;
+      & > i {
+        position: absolute;
+        left: 28%;
+        top: 21%;
+        font-size: 22px;
+      }
+    }
+  }
+  table {
+    border: 1px solid black;
+    width: 900px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+    th, td {
+      border: 1px solid black;
+      padding: 1em;
+      color: #111;
+      font-size: 20px;
+    }
+    .Table__btn {
+      background-color: red;
+      color: white;
+      padding: 0.9em 1.5em;
+      border: 0;
+      border-radius: 12px;
+    }
+  }
+}
