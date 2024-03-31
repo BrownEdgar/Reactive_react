@@ -27,6 +27,12 @@ export default function App() {
     }
     formik.resetForm();
   }
+  console.log(users);
+
+  const togglePassword = (index) => {
+    setIsOpen(!isOpen)
+    setCurrentIndex(index)
+  }
 
   return (
     <div className='App'>
@@ -58,11 +64,33 @@ export default function App() {
               <Field type="password" name="password" placeholder="Password" />
               <ErrorMessage name="password" className="error" component="p" />
             </div>
+            <input type="submit" value="save"/>
           </Form>
         )}
       </Formik>
 
-      
+      <div className="data">
+        {users.map((item, index) => {
+          <div className="data__info">
+            <div className="data__email">
+              <span className='data__saved'>Email:</span>
+              <span>{item.email}</span>
+            </div>
+            <div className='data__userName'>
+              <span className='data__saved'>Username:</span>
+              <span>{item.username}</span>
+            </div>
+            <div className='data__password'>
+              <span className='data__saved'>Password:</span>
+              <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
+              <i 
+              className={`bi ${isOpen && currentIndex === index ? "bi-eye-fill" : "bi-eye-slash-fill"}`}
+              onClick={togglePassword}
+              ></i>
+            </div>
+          </div>
+        })}
+      </div>    
     </div>
   )
 }

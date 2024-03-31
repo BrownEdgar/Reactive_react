@@ -1,0 +1,61 @@
+body{
+	background-color: #eee;
+}
+
+.App{
+  margin: 50px auto;
+  .form{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 600px;
+    border-radius: 20px;
+		border: 0;
+    padding: 1em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    &__email, &__userName, &__password{
+      display: flex;
+      flex-direction: column;
+      input{
+        padding: 1.3rem;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+    }
+    input[type='submit']{
+      border-radius: 8px;
+      padding: 1.3rem;
+      border: 0;
+      cursor: pointer;
+      background-color: rgb(55, 181, 55);
+      color: #fff;
+      font-size: 22px;
+    }
+    .error{
+			background-color: red;
+			color: #fff;
+			padding: 0.6rem 1rem;
+			border-radius:  0 0 15px 15px;
+			margin-top: 0;
+		}
+  }
+  .data__info{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 20px;
+		border: 0;
+    padding: 1em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .data__saved{
+    background-color: aqua;
+    border: 3px ;
+  }
+}  
+    
