@@ -26,6 +26,17 @@ const validationSchema = object(
 
 export default function App() {
   const [blogs, setBlogs] = useState([]);
+  const [currentBlog, setCurrentBlog] = useState(null)
+
+
+
+  const setEditableBlogId = (id, option = null) => {
+    if (option === 'cancel') {
+      setCurrentBlog(null)
+    } else {
+      setCurrentBlog(id)
+    }
+  }
 
   const getPosts = () => {
     axios('http://localhost:3000/blogs')
@@ -38,7 +49,7 @@ export default function App() {
 
   const handleSubmit = (values, formik) => {
     // poster:"C:\\fakepath\\photo.jpg"
-    console.log(values)
+
     const blog = {
       id: nanoid(),
       title: values.title,
@@ -46,11 +57,17 @@ export default function App() {
       poster: `./images/${values.poster.split('fakepath\\')[1]}`
 
     }
-    console.log(blog)
+
     axios.post('http://localhost:3000/blogs', blog)
       .then(res => {
         getPosts()
       })
+      .catch(err => console.log(err))
+  }
+
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3000/blogs/${id}`)
+      .then(getPosts)
       .catch(err => console.log(err))
   }
 
@@ -100,7 +117,15 @@ export default function App() {
 
       <div className="App__blogs">
         {blogs.map(elem => {
-          return <Blog blog={elem} key={elem.id} />
+          return <Blog
+            blog={elem}
+            key={elem.id}
+            handleDelete={handleDelete}
+            setId={setEditableBlogId}
+            currentBlog={currentBlog}
+            getPosts={getPosts}
+
+          />
         })}
       </div>
     </div>
