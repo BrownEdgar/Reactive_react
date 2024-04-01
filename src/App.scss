@@ -1,0 +1,19 @@
+.App {
+    padding: 2em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    min-height: 100vh;
+    form {
+        padding: 20px;
+        input {
+            width: 100%;
+            padding: 1em;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    }
+    .error {
+        color: red;
+    }
+}
