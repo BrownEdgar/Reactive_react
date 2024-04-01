@@ -16,24 +16,23 @@ export default function Sing() {
   const validationSchema = object({
     email: string().email(),
     username: string().min(3).max(15),
-    password: string().matches(/^[A-Z]/, "must start with uppercase").matches(/\d/, "must have a minimum 1 number").matches(/^[!@#$%^&*]/,"musrt have a minimum 1 symbol")
+    password: string().matches(/^[A-Z]/, "must start with uppercase").required()
   });
   const [users, setusers] = useState([])
 
 
   useEffect(() => {
     axios("http://localhost:3000/users")
-    .then( res => setusers(res.data))
+      .then(res => setusers(res.data))
   }, [])
-  
 
-  const handleSubmit = (values,formik) => {
+
+  const handleSubmit = (values, formik) => {
     const user = {
       id: nanoid(5),
-      email: values.email,
-      username: values.username,
-      password: values.password
+      ...values
     }
+    console.log(user)
     axios.post("http://localhost:3000/users", user)
     formik.resetForm()
   }
@@ -43,34 +42,42 @@ export default function Sing() {
     <div>
       <div className='Sing'>
 
-        <Formik onSubmit={handleSubmit} 
-        initialValues={
-          { email: "", username: "", password: "" }
-        }
-          validationSchema={validationSchema} >
-          <Form className='form' >
-            <div className="form__group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" required />
-              <ErrorMessage name="email" component="p" />
-            </div>
-            <div className="form__group">
-              <label htmlFor="username">Username</label>
-              <input type="text" name='username' />
-              <ErrorMessage name="username" component="p" required/>
-            </div>
-            <div className="form__group form__group-password">
-              <label htmlFor="password">Password</label>
-              <input type="password" name='password' required/>
-              <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"} `} onClick={showPass}></i>
-              <ErrorMessage name="password" component="p" />
-            </div>
-            <input type="submit" value="SAVE" />
-          </Form>
+        <Formik
+          onSubmit={handleSubmit}
+          initialValues={
+            { email: "", username: "", password: "" }
+          }
+          validationSchema={validationSchema}
+        >
+          {
+            (formik) => {
+              return (
+                <Form className='form' >
+                  <div className="form__group">
+                    <label htmlFor="email">Email</label>
+                    <Field type="email" name="email" required />
+                    <ErrorMessage name="email" component="p" />
+                  </div>
+                  <div className="form__group">
+                    <label htmlFor="username">Username</label>
+                    <Field type="text" name='username' />
+                    <ErrorMessage name="username" component="p" required />
+                  </div>
+                  <div className="form__group form__group-password">
+                    <label htmlFor="password">Password</label>
+                    <Field type="password" name='password' required />
+                    <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"} `} onClick={showPass}></i>
+                    <ErrorMessage name="password" component="p" />
+                  </div>
+                  <input type="submit" value="SAVE" />
+                </Form>
+              )
+            }
+          }
         </Formik>
-    </div>
+      </div>
 
-    <div className='Users__fix'>
+      <div className='Users__fix'>
         {
           users.map((user) => {
             return (
@@ -78,7 +85,7 @@ export default function Sing() {
             )
           })
         }
+      </div>
     </div>
-  </div>
   )
 }

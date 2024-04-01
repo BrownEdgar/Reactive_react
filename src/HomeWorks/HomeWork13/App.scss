@@ -1,18 +1,20 @@
 .Sing {
-  border: 1px solid black;
-  min-width: 600px;
-  border-radius: 16px;
-  padding: 1em;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
   p {
     color: red;
   }
   .form {
+    border: 1px solid black;
+    min-width: 600px;
+    border-radius: 16px;
+    padding: 1em;
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
     display: flex;
     flex-direction: column;
     gap: 25px;
     margin: 20px auto;
+    width: 500px;
     &__group {
       display: flex;
       flex-direction: column;
@@ -36,17 +38,16 @@
         right: 20px;
         font-size: 25px;
       }
-      
     }
-      input[type="submit"] {
-        font-size: 20px;
-        font-weight: bold;
-        color: #fff;
-        border-radius: 8px;
-        border: 0;
-        padding: 1rem;
-        background-color: rgb(50, 205, 50);
-      }
+    input[type="submit"] {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 8px;
+      border: 0;
+      padding: 1rem;
+      background-color: rgb(50, 205, 50);
+    }
 
     .see {
       color: black;
@@ -85,15 +86,13 @@
     }
   }
 }
-
-
-
 .Users__fix {
   display: flex;
   width: 100%;
   border: 1px solid black;
   padding: 1em;
+  flex-wrap: wrap;
   background-color: #fff;
-  position: fixed;
-  bottom: 0;
+  margin-top: 50px;
+  gap: 20px;
 }
