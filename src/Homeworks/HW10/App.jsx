@@ -69,10 +69,7 @@ export default function App() {
             <th>Last Name</th>
             <th>Street name</th>
             <th>number</th>
-            <th>Floor</th>
-            <th>Postal code</th>
             <th>City</th>
-            <th>State</th>
             <th>Country</th>
           </tr>
         </thead>
@@ -86,10 +83,7 @@ export default function App() {
                   <td>{elem.last_name}</td>
                   <td>{elem.street_name}</td>
                   <td>{elem.number}</td>
-                  <td>{elem.floor}</td>
-                  <td>{elem.postal_code}</td>
                   <td>{elem.city}</td>
-                  <td>{elem.state}</td>
                   <td>{elem.country}</td>
                 </tr>
               )

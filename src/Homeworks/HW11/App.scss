@@ -1,0 +1,70 @@
+.App {
+  form {
+    margin: 20px auto;
+    padding: 1em;
+    border-radius: 12px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    & > div {
+      margin: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      & > input {
+        margin-top: 10px;
+        width: 100%;
+        padding: 1em;
+        border-radius: 8px;
+        display: block;
+      }
+    }
+    & > input[type='submit'] {
+      margin-top: 10px;
+      width: 70%;
+      padding: 1em;
+      color: #fff;
+      background-color: #2BD12A;
+      border-radius: 8px;
+      border: 0;
+    }
+  }
+  & > hr {
+    height: 20x;
+  }
+  &__content {
+    width: 400px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    position: relative;
+    & > div {
+      padding: 8px;
+      margin-bottom: 30px;
+      & > span:nth-child(1) {
+        padding: 8px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        background-color: #A4EFF2;
+        border-radius: 10px;
+        border: 3px dashed #26CAC7;
+      }
+      & > i {
+        position: absolute;
+        right: 22px;
+        font-size: 22px;
+      }
+    }
+    .bi-x-circle {
+      position: absolute;
+      top: 10px;
+      right: 10px;font-size: 22px;
+    }
+  }    
+}
