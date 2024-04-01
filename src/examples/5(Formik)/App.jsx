@@ -42,18 +42,23 @@ export default function App() {
         }
         validationSchema={validationSchema}
       >
-        <Form>
-          <Field type="email" name="email" placeholder='email' />
-          <ErrorMessage name="email" component='p' className='error' />
-          <Field type="text" name="username" placeholder='username' />
-          <ErrorMessage name="username" component='p' className='error' />
-          <Field as='select' name='language' >
-            {languages.map(item => {
-              return <option value={item} key={item}>{item}</option>
-            })}
-          </Field>
-          <input type='submit' value="save" />
-        </Form>
+        {(formik) => {
+          console.log(formik)
+          return (
+            <Form>
+              <Field type="email" name="email" placeholder='email' />
+              <ErrorMessage name="email" component='p' className='error' />
+              <Field type="text" name="username" placeholder='username' />
+              <ErrorMessage name="username" component='p' className='error' />
+              <Field as='select' name='language' >
+                {languages.map(item => {
+                  return <option value={item} key={item}>{item}</option>
+                })}
+              </Field>
+              <input type='submit' value="save" disabled={!formik.isValid || !formik.dirty} />
+            </Form>
+          )
+        }}
       </Formik>
 
       <div className="table">

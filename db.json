@@ -1,0 +1,23 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Кто убил Кенеди?",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis reprehenderit mollitia magni explicabo at tempore quis. Quaerat laudantium tempora qui officiis, eum vel autem blanditiis, aut, nulla voluptatum amet!",
+      "poster": "./images/cenedy.jpg",
+      "date": "2024/03/05"
+    },
+    {
+      "id": "FCPWj6eShrOkjfsNiUA1z",
+      "title": "daspisaid",
+      "desc": "oasuhdusayg skadsaldjhasldahs daslidh asljhd aslhd lashd oaushdoiash das",
+      "poster": "./images/netflix.jpg"
+    },
+    {
+      "id": "uotKDluM1kQ1ydU1qSG3b",
+      "title": "sdoashd asjdj sad",
+      "desc": "d;'sajkdlasjk d;lasd jlasd ;aks;dk aa; skdk a;sdasdadas",
+      "poster": "./images/abstract.jpg"
+    }
+  ]
+}

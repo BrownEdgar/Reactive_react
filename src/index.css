@@ -7,8 +7,18 @@ body {
   font-family: "Poppins", sans-serif;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: #eee;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.devider {
+  height: 100%;
+  flex-grow: 1;
 }
