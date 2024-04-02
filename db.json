@@ -1,0 +1,40 @@
+{
+  "sofas": [
+    {
+      "id": "1",
+      "name": "Ktaxon Accent Chair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_03.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Chalton Armchair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_01.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Ktaxon Accent Chair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_02.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Ktaxon Accent Chair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_04.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Ktaxon Accent Chair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_05.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Ktaxon Accent Chair",
+      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
+      "image": "./public/images/armchair_06.jpg"
+    }
+  ]
+}
