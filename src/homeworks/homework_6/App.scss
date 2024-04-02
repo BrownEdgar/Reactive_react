@@ -48,7 +48,12 @@ body{
     width: 100%;
     align-items: start;
     gap: 50px;
-   
+    flex-wrap: wrap;
+    &__user{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     &__info{
       display: flex;
       gap: 30px;
