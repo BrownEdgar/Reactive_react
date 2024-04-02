@@ -81,24 +81,24 @@ export default function App() {
       <div className="data">
         {users.map((item, index) => {
           return(
-          <div className="data__info">
-            <div className="data__email data__user">
-              <span className='data__saved'>Email:</span>
-              <span>{item.email}</span>
+            <div className="data__info">
+              <div className="data__email data__user">
+                <span className='data__saved'>Email:</span>
+                <span>{item.email}</span>
+              </div>
+              <div className='data__userName data__user'>
+                <span className='data__saved'>Username:</span>
+                <span>{item.username}</span>
+              </div>
+              <div className='data__password data__user'>
+                <span className='data__saved'>Password:</span>
+                <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
+                <i 
+                className={`bi ${isOpen && currentIndex === index ? "bi-eye-fill" : "bi-eye-slash-fill"}`}
+                onClick={() => togglePassword(index)}
+                ></i>
+              </div>
             </div>
-            <div className='data__userName data__user'>
-              <span className='data__saved'>Username:</span>
-              <span>{item.username}</span>
-            </div>
-            <div className='data__password data__user'>
-              <span className='data__saved'>Password:</span>
-              <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
-              <i 
-              className={`bi ${isOpen && currentIndex === index ? "bi-eye-fill" : "bi-eye-slash-fill"}`}
-              onClick={() => togglePassword(index)}
-              ></i>
-            </div>
-          </div>
           )
         })}
       </div>    
