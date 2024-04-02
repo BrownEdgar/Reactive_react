@@ -73,15 +73,15 @@ export default function App() {
         {users.map((item, index) => {
           return(
           <div className="data__info">
-            <div className="data__email">
+            <div className="data__email data__user">
               <span className='data__saved'>Email:</span>
               <span>{item.email}</span>
             </div>
-            <div className='data__userName'>
+            <div className='data__userName data__user'>
               <span className='data__saved'>Username:</span>
               <span>{item.username}</span>
             </div>
-            <div className='data__password'>
+            <div className='data__password data__user'>
               <span className='data__saved'>Password:</span>
               <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
               <i 
