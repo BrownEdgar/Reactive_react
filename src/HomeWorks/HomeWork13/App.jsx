@@ -32,7 +32,6 @@ export default function Sing() {
       id: nanoid(5),
       ...values
     }
-    console.log(user)
     axios.post("http://localhost:3000/users", user)
     formik.resetForm()
   }
