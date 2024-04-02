@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {ErrorMessage, Field, Formik, Form } from 'formik'
+import React, { useState } from 'react'
+import { ErrorMessage, Field, Formik, Form } from 'formik'
 import { string, object } from 'yup'
 import { nanoid } from 'nanoid';
 import './App.scss'
