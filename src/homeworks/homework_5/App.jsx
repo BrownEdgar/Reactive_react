@@ -12,7 +12,8 @@ const validationSchema = object({
   state: string().matches(/^[A-Z]/, "must start with uppercase").required(),
   number: string().matches(/[0-9]/, "must be only numbers").required(),
   city: string().matches(/^[A-Z]/, "must start with uppercase").required(),
-  floorOrUnit: string().required()
+  floorOrUnit: string().required(),
+  countries: string().required()
 })
 
 const countries = ["Japan", "USA", "France", "Germany", "Russia"]
@@ -42,7 +43,8 @@ export default function App() {
           state: '',
           number: '',
           city: '',
-          floorOrUnit: ''
+          floorOrUnit: '',
+          countries: ''
         }
       }
       validationSchema={validationSchema}
@@ -50,9 +52,9 @@ export default function App() {
         <Form>
           <h1>Data logging</h1>
           <div className="form">
+            <label htmlFor="Name">Name</label>
             <div className='form__name'>
               <div>
-                <label htmlFor="Name">Name</label>
                 <Field type="text" placeholder="First name" name="firstName" />
                 <ErrorMessage name="firstName" component='p' className='error' />
               </div>
@@ -62,9 +64,9 @@ export default function App() {
               </div>
             </div>
             <div className="form__address">
+              <label htmlFor="Address">Address</label>
               <div className="form__row">
                 <div className="streetName">
-                  <label htmlFor="Address">Address</label>
                   <Field type="text" name="streetName" placeholder="Street name"  required />
                   <ErrorMessage name="streetName" component="p" className='error' />
                 </div>    

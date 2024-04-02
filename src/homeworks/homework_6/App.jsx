@@ -71,6 +71,7 @@ export default function App() {
 
       <div className="data">
         {users.map((item, index) => {
+          return(
           <div className="data__info">
             <div className="data__email">
               <span className='data__saved'>Email:</span>
@@ -85,10 +86,11 @@ export default function App() {
               <span>{isOpen && currentIndex === index ? item.password : '*'.repeat(8)}</span>
               <i 
               className={`bi ${isOpen && currentIndex === index ? "bi-eye-fill" : "bi-eye-slash-fill"}`}
-              onClick={togglePassword(index)}
+              onClick={() => togglePassword(index)}
               ></i>
             </div>
           </div>
+          )
         })}
       </div>    
     </div>
