@@ -15,6 +15,11 @@ export default function App() {
   const [users, setUsers] = useState([])
   const [isOpen, setIsOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(null)
+  const [isOpening, setIsOpening] = useState(false)
+
+  const typeChanging = () => {
+    setIsOpening(!isOpening)
+  }
 
   const handleSubmit = (values, formik) => {
     const {email} = values
@@ -61,7 +66,11 @@ export default function App() {
             </div>
             <div className="form__password">
               <label htmlFor="password">Password</label>
-              <Field type="password" name="password" placeholder="Password" />
+              <Field type={`${isOpening ? "text" : "password" }`} name="password" placeholder="Password" />
+              <i 
+              className={`bi ${isOpening ? "bi-eye-slash-fill" : "bi-eye-fill"}`}
+              onClick={typeChanging}
+              ></i>
               <ErrorMessage name="password" className="error" component="p" />
             </div>
             <input type="submit" value="save"/>
