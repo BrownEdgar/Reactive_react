@@ -20,7 +20,7 @@
 
   &__Goods {
     padding: 2em;
-    display: grid;  
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
@@ -29,48 +29,45 @@
     display: flex;
     flex-direction: column;
     .form {
-    border: 1px solid black;
-    min-width: 600px;
-    border-radius: 16px;
-    padding: 1em;
-    box-shadow:
-      rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin: 20px auto;
-    width: 500px;
-
-    &__sell {
-      border: 0;
-      padding: 0.3em;
-      color: #fff;
-      border-radius: 12px;
-      background-color: #111;
-      font-size: 24px;
-   }
-    &__group {
+      border: 1px solid black;
+      min-width: 600px;
+      border-radius: 16px;
+      padding: 1em;
+      box-shadow:
+        rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 16px;
-      font-size: 20px;
-      input {
-        border: 1px solid black;
-        border-radius: 8px;
+      gap: 25px;
+      margin: 20px auto;
+      width: 500px;
+
+      &__sell {
+        border: 0;
+        padding: 0.3em;
+        color: #fff;
+        border-radius: 12px;
+        background-color: #111;
+        font-size: 24px;
+      }
+      &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
         font-size: 20px;
-        padding: 1rem;
+        input {
+          border: 1px solid black;
+          border-radius: 8px;
+          font-size: 20px;
+          padding: 1rem;
+        }
       }
     }
-   }
   }
 }
 
-
-
 .Goods {
-
   .bi-x-square-fill {
     position: absolute;
     top: 10px;
@@ -85,6 +82,7 @@
   &__img {
     height: 400px;
     width: 100%;
+    object-fit: cover;
   }
 
   &__sofa {
@@ -95,7 +93,7 @@
 
   &__textAndPrice {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     margin-bottom: 5px;
@@ -109,7 +107,7 @@
     font-size: 24px;
   }
 
-  &__price::after{
+  &__price::after {
     content: "$";
     margin-left: 2px;
     top: 10px;
@@ -126,7 +124,7 @@
   &__edit {
     display: flex;
     justify-content: end;
-    
+
     i {
       font-size: 24px;
     }
@@ -150,7 +148,7 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  } 
+  }
 
   &__inputs {
     display: flex;

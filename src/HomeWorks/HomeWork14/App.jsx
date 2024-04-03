@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "./App.scss"
-import Goods from "./Goods/Goods"
-import {nanoid} from "nanoid"
+
+import { nanoid } from "nanoid"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { string, object, number } from "yup"
 
@@ -10,7 +10,7 @@ import { string, object, number } from "yup"
 export default function App() {
   const [goods, setGoods] = useState([])
   const [edit, setEdit] = useState(null)
-  
+
   const validationSchema = object({
     title: string().min(3).max(15).required("Important!"),
     desc: string().min(3).max(15).required("Important!"),
@@ -25,10 +25,11 @@ export default function App() {
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:3000/goods/${id}`)
-      .then(getGoods())
+      .then(getGoods)
   }
   const updatePost = (e) => {
-    const {title, desc, price} = e.target;
+    e.preventDefault();
+    const { title, desc, price } = e.target;
     const goods = {
       title: title.value,
       desc: desc.value,
@@ -36,13 +37,17 @@ export default function App() {
     }
 
     axios.patch(`http://localhost:3000/goods/${edit}`, goods)
-      .then(getGoods())
+      .then(() => {
+        setEdit(null)
+        getGoods()
+      })
+
   }
 
   useEffect(() => {
     getGoods()
   }, [])
-  
+
   const handleEdit = (id) => {
     setEdit(id)
   }
@@ -50,9 +55,13 @@ export default function App() {
   const handleSubmit = (values, formik) => {
     const goods = {
       id: nanoid(5),
-      ...values
+      title: values.title,
+      desc: values.desc,
+      price: values.price,
+      image: `./images/${values.file}`
     }
     axios.post("http://localhost:3000/goods/", goods)
+      .then(getGoods)
     formik.resetForm()
   }
 
@@ -60,13 +69,13 @@ export default function App() {
     <div className='App'>
       <h1 className='App__title'>Choose Your Sofa</h1>
       <div className="App__sell">
-      
+
         <div className="App__form">
           <h2>Sell your Sofa</h2>
           <Formik
             onSubmit={handleSubmit}
             initialValues={
-              { title: "", desc: "", price: "" }
+              { title: "", desc: "", price: "", image: '' }
             }
             validationSchema={validationSchema}
           >
@@ -89,6 +98,11 @@ export default function App() {
                       <Field type="text" name='price' required />
                       <ErrorMessage name="price" component="p" />
                     </div>
+                    <div className="form__group">
+                      <Field type='file' name='image' onChange={(e) => {
+                        formik.setFieldValue('file', e.currentTarget.files[0].name)
+                      }} />
+                    </div>
                     <input type="submit" value="SELL" className='form__sell' />
                   </Form>
                 )
@@ -105,39 +119,39 @@ export default function App() {
               <div className='Goods' key={goods.id}>
                 <span onClick={() => handleDelete(goods.id)}><i className="bi bi-x-square-fill" ></i></span>
                 <div className="Goods__sofa">
-                  <img src={goods.image} alt="" className='Goods__img'/>
+                  <img src={goods.image} alt="" className='Goods__img' />
                   {
                     edit === goods.id ? (
                       <form className='Edit__form' onSubmit={updatePost}>
                         <div className='Edit__inputs'>
-                          <input type="text" name='title'/>
+                          <input type="text" name='title' />
                           <input type="text" name='price' />
                         </div>
-                        <textarea name="desc"  cols="50" rows="10"></textarea>
-                       <div>
+                        <textarea name="desc" cols="50" rows="10"></textarea>
+                        <div>
                           <button onClick={() => setEdit(null)}>cancle</button>
                           <button>save</button>
-                       </div>
+                        </div>
                       </form>
                     ) : (
-                        <div className="Goods__content">
-                          <div className="Goods__textAndPrice">
-                            <b>{goods.title}</b>
-                            <p className='Goods__price'>{goods.price}</p>
-                          </div>
-                          <div className="Goods__desc">
-                            <p>{goods.desc}</p>
-                          </div>
+                      <div className="Goods__content">
+                        <div className="Goods__textAndPrice">
+                          <b>{goods.title}</b>
+                          <p className='Goods__price'>{goods.price}</p>
                         </div>
+                        <div className="Goods__desc">
+                          <p>{goods.desc}</p>
+                        </div>
+                      </div>
                     )
                   }
                   <div className="Goods__edit">
                     <span onClick={() => handleEdit(goods.id)}><i className="bi bi-pen"></i></span>
                   </div>
+                </div>
               </div>
-            </div>
             )
-        })
+          })
         }
       </div>
     </div>

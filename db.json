@@ -43,25 +43,11 @@
       "image": "https://www.ikea.com/us/en/images/products/hyltarp-sofa-gransel-natural__1193814_pe901641_s5.jpg?f=xxl"
     },
     {
-      "id": "7",
-      "title": "HOLMSUND",
-      "desc": "This sofa converts quickly and easily into a spacious bed when you remove the back cushions and pull out the underframe.",
-      "price": "1149",
-      "image": "https://www.ikea.com/us/en/images/products/holmsund-sleeper-sectional-3-seat-kilanda-dark-blue__1212723_pe910728_s5.jpg?f=xxl"
-    },
-    {
-      "id": "8",
-      "title": "BALKARP",
-      "desc": " BALKARP sleeper sofa offers around-the-clock comfort. The adjustable back allows you to sit during the day, lean back in the evening and lie down at night. The Vissle gray cover fits in just about anywhere.",
-      "price": "249",
-      "image": "https://www.ikea.com/us/en/images/products/balkarp-sleeper-sofa-vissle-gray__0366179_pe548633_s5.jpg?f=xxl"
-    },
-    {
-      "id": "9",
-      "title": "VINLIDEN",
-      "desc": "Sitting or lying on VINLIDEN sofa feels like a cozy embrace. You sink into large, soft cushions, and the sofa is also super easy to assemble and disassemble ⎼ so you can take it with you if you move!",
-      "price": "949",
-      "image": "https://www.ikea.com/us/en/images/products/vinliden-sofa-with-chaise-hakebo-dark-gray__0852766_pe780245_s5.jpg?f=xxl"
+      "id": "d18zP",
+      "title": "444",
+      "desc": "4444",
+      "price": "444",
+      "image": "./images/divan.jpg"
     }
   ]
 }
