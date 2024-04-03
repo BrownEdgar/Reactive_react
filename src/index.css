@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -21,4 +22,21 @@ ul {
 .devider {
   height: 100%;
   flex-grow: 1;
+}
+
+.container {
+  text-align: center;
+  padding: 2em;
+}
+
+a.link {
+  background-color: royalblue;
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  padding: 0.6rem 1rem;
+  display: block;
+  width: 180px;
+  margin: 0px auto;
 }

@@ -1,0 +1,13 @@
+@import "../../sass/mixins";
+@import "../../sass/colors";
+
+.ErrorPage {
+  padding: 2em;
+  color: $main-text-color;
+  text-align: center;
+  @include bgRules("./images/404.jpg");
+  min-height: calc(100vh - 80px);
+  h1 {
+    margin-bottom: 16px;
+  }
+}
