@@ -1,0 +1,26 @@
+section {
+  height: 65vh;
+
+  > [class*="__container"] {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(40%);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+@mixin bgRules($url, $size, $position) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+}

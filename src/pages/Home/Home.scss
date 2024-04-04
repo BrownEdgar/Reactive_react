@@ -1,0 +1,5 @@
+@import '../All';
+
+.home {
+   @include bgRules("https://images.hdqwalls.com/wallpapers/los-angles-synthwave-4k-wp.jpg", cover, center);
+}

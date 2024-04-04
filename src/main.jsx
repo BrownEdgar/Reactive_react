@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './HWs/React-HW_13/App'
-import './index.scss';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./HWs/React-HW_14/App";
+import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import "./index.scss";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>
+);

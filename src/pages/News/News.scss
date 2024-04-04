@@ -1,0 +1,5 @@
+@import "../All";
+
+.news {
+  @include bgRules("https://wallpapercave.com/wp/wp6860393.jpg", cover, center);
+}
