@@ -3,6 +3,8 @@ import './Navbar.scss'
 
 export default function NavBar() {
   return (
-    <div>NavBar</div>
+    <div className='NavBar'>
+        
+    </div>
   )
 }
