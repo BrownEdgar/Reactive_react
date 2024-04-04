@@ -1,9 +1,9 @@
 import React from 'react'
 import './Navbar.scss'
 
-export default function NavBar() {
+export default function Navbar() {
   return (
-    <div className='NavBar'>
+    <div className='Navbar'>
         
     </div>
   )
