@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  // background-color: #222;
+  background: transparent;
+  position: fixed;
+  padding: 1em 2em;
+  color: #8e7979;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav {
+    width: 60%;
+    min-width: 300px;
+    height: 100%;
+    ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 20px;
+      li {
+        margin-right: 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+  .logo {
+    font-size: 0.6em 1em;
+    background-color: white;
+    color: #1d1d1d;
+    padding: 2px;
+    a {
+      letter-spacing: 4px;
+      color: inherit;
+    }
+  }
+}

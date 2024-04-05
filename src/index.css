@@ -10,3 +10,21 @@ body {
 a {
   text-decoration: none;
 }
+
+a.link {
+  background-color: royalblue;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  padding: 0.6rem 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  text-align: center;
+  padding: 2em;
+}
