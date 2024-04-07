@@ -1,0 +1,30 @@
+header{
+    width: 100%;
+    position: fixed;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bakery{
+        background-color: #eee;
+        font-size: 1.7em;
+    }
+    a{
+        color: inherit;
+    }
+    nav{
+        width: 45%;
+        min-width: 300px;
+        height: 100%;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 20px;
+            li{
+                font-size: 25px
+            }
+        }
+    }
+}
