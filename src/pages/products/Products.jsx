@@ -6,8 +6,10 @@ export default function Products() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    axios
+    axios('https://fakestoreapi.com/products')
+    .then(res => setData(res))
   })
+  
   return (
     <div className='Products'>
         <h1>Our products</h1>
