@@ -1,9 +1,11 @@
 .Home {
-  background-image: url("https://images.wallpapersden.com/image/download/rising-sun-at-mountains-4k-background_bmZobGyUmZqaraWkpJRobWllrWdma2U.jpg");
+  text-align: center;
+  color: white;
+  &__content {
+  background-image: url("https://i.pinimg.com/originals/91/62/7e/91627e8d4506242920eaee3c256e51b5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  text-align: center;
-  line-height: 500px;
-  height: 500px;
+  padding: 15rem;
+  }
 }

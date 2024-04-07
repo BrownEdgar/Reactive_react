@@ -3,7 +3,9 @@ import "./Contact.scss"
 export default function Contact() {
   return (
     <div className='Contact'>
-      <h1>Contact page</h1>
+      <div className="Contact__content">
+        <h1>CONTACT PAGE</h1>
+      </div>
     </div>
   )
 }

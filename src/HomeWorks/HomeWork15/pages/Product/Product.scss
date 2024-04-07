@@ -1,0 +1,76 @@
+.Product {
+
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    min-height: 620px;
+    position: relative;
+    width: 70%;
+    padding: 1em;
+    display: flex;
+    gap: 30px;
+    border: 1px solid black;
+    border-radius: 16px;
+  }
+
+  .bi-star-fill{
+    font-size: 20px;
+    color: gold;
+  }
+
+  &__price {
+    max-width: 4em;
+    color: rgb(242, 0, 255);
+    border-radius: 8px;
+    position: relative;
+    font-size: 24px;
+  }
+
+  &__price::after {
+    content: "$";
+    margin-left: 2px;
+    top: -5px;
+    font-size: 20px;
+    color: #111;
+    position: absolute;
+  }
+
+  &__rate {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__image {
+    max-height: 600px;
+    width: auto;
+  }
+
+  &__titleAndDesc {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 1em;
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgb(242, 0, 255);
+  }
+
+}

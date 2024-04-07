@@ -1,9 +1,13 @@
-.Home {
-  background-image: url("https://images.wallpapersden.com/image/download/rising-sun-at-mountains-4k-background_bmZobGyUmZqaraWkpJRobWllrWdma2U.jpg");
+.News {
+  text-align: center;
+  color: white;
+  &__content {
+  background-image: url("https://images2.alphacoders.com/123/1239509.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  text-align: center;
-  line-height: 500px;
-  height: 500px;
+  background-position: top;
+  padding: 15rem;
+  }
 }
+
+

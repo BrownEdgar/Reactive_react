@@ -3,13 +3,19 @@
 
 
 .Header {
+
   display: flex;
   justify-content: space-between;
   padding-inline: 50px;
+  gap: 20px;
   align-items: center;
   &__logo {
+  margin: 20px;
   color: #111;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   background-color: #fff;
   font-size: 24px;
   font-family: "Pacifico", cursive;
@@ -20,6 +26,9 @@
     display: flex;
     gap: 70px;
     align-items: center;
+    flex-wrap: wrap;
+    color: #111;
+    font-weight: 700;
   }
 }
 

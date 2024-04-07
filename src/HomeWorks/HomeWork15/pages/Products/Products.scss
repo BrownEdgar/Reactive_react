@@ -1,0 +1,30 @@
+.Products {
+  margin-top: 100px;
+  &__container {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__content {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__image {
+    height: 500px;
+    width: 100%;
+  }
+
+  &__textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,9 +1,11 @@
 .Contact {
-  background-image: url("https://images.wallpapersden.com/image/download/rising-sun-at-mountains-4k-background_bmZobGyUmZqaraWkpJRobWllrWdma2U.jpg");
+  text-align: center;
+  color: white;
+  &__content {
+  background-image: url("https://static.nationalgeographic.co.uk/files/styles/image_3200/public/gettyimages-1175707040_web.jpg?w=1600&h=900");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  text-align: center;
-  line-height: 500px;
-  height: 500px;
+  background-position: top;
+  padding: 15rem;
+  }
 }
