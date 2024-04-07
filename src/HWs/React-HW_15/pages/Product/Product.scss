@@ -1,0 +1,133 @@
+.product {
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: center;
+    max-width: 1240px;
+    padding-inline: 30px;
+    margin: 0 auto;
+    column-gap: 30px;
+    margin-block: 2rem;
+  }
+
+  &__img {
+    overflow: hidden;
+    flex: 1 0 50%;
+    max-height: 550px;
+    border-radius: 16px;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: start;
+  }
+
+  &__category {
+    font-family: Pacifico;
+    font-size: 1.8rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+  }
+
+  &__desc {
+    font-size: 18px;
+  }
+
+  &__more-btn {
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: royalblue;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    transition: all 0.23s ease 0s;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__price {
+    font-size: 2rem;
+    color: rgb(128, 255, 0);
+    background-color: gold;
+    padding: .8rem 1rem;
+    color: #333;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+
+  &__count {
+    font-size: 1.5rem;
+    > span {
+      font-size: 2rem;
+      &.red {
+         color: red;
+      }
+      &.green {
+         color: yellowgreen;
+      }
+    }
+  }
+
+  &__range {
+   display: flex;
+   gap: 10px;
+   > i {
+      font-size: 1.5rem;
+   }
+   > span {
+    font-size: 1.5rem;
+    color: yellow;
+    margin-left: 8px;
+   }
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background-color: royalblue;
+    color: whitesmoke;
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    max-width: 110px;
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 0;
+
+    > i {
+      font-size: 1.2rem;
+    }
+
+    > span {
+      font-size: 1.2rem;  
+      font-weight: 700;
+    }
+  }
+}
+
+.bi-star-half,
+.bi-star-fill {
+  color: yellow;
+}
