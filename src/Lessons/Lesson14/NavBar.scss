@@ -1,0 +1,51 @@
+header {
+    width: 100%;
+    background: transparent;
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    background-color: black;
+    font-style: normal;
+    position: fixed;
+    padding: 2em 2em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav {
+      width: 40%;
+      min-width: 300px;
+      height: 100%;
+      ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+        gap: 20px;
+        li {
+          margin-right: 20px;
+          font-size: 20px;
+          text-transform: uppercase;
+          a {
+            &.active__link {
+                color: rgb(72, 233, 23);
+                text-decoration: overline underline;
+                text-underline-offset: 3px;
+            }
+            color: inherit;
+          }
+        }
+      }
+    }
+    .logo {
+      font-size: 0.6em 1em;
+      font-family: "Lobster", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      padding: 2px;
+      a {
+        letter-spacing: 4px;
+        color: inherit;
+      }
+    }
+  }
