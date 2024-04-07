@@ -1,0 +1,40 @@
+.Products{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__content{
+  position: relative;
+  margin-top: 20px;
+  border: 10px outset dimgray;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  &-cloth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 70px;
+    bottom: 70px;
+  }
+  &-title{
+    margin-top: 100px;
+    h2{
+      position: absolute;
+      left: 20px;
+      font-size: 15px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+img{
+  margin-left: 150px;
+  width: 150px;
+  height: 150px;
+  }
+}
