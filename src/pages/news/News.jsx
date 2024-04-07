@@ -3,7 +3,7 @@ import './News.scss'
 
 export default function News() {
   return (
-    <div className='Contact'>
+    <div className='News'>
         <h1>News page</h1>
     </div>
   )
