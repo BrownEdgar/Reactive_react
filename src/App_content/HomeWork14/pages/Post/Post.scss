@@ -1,0 +1,54 @@
+.Post {
+    width: 500px;
+    border-radius: 8px;
+    margin: 16px auto;
+    padding: 1em;
+    height: 350px;
+    text-align: left;
+    background-color: #1d1d1d;
+    color: bisque;
+    overflow-y: auto;
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+// .Link {
+//     width: 100%;
+//     display: block;
+//     color: royalblue;
+//     text-align: center;
+//     margin-top: 40px;
+//     font-size: 22px;
+//     position: relative;
+//     &::before,
+//     &::after {
+//         content: "";
+//         height: 2px;
+//         width: 42%;
+//         background-color: royalblue;
+//         position: absolute;
+//         top: 50%;
+//         left: 0;
+//     }
+//     &::after {
+//         content: "";
+//         right: 0;
+//         left: auto;
+//     }
+// }
+
+// .buttons {
+//     width: 500px;
+//     padding: 1em;
+//     margin: 20px auto;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     button {
+//         padding: 0.6rem 1rem;
+//         cursor: pointer;
+//         font-weight: 500;
+//         border-radius: 6px;
+//     }
+// }

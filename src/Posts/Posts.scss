@@ -1,0 +1,16 @@
+.Posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    & > a {
+        padding: 1em;
+        border-radius: 12px;
+        color: #fff;
+        background-image: linear-gradient(to top right, #0d9488, #042f2e);
+        flex-basis: 47%;
+        h2 {
+            font-weight: 100;
+        }
+    }
+}
