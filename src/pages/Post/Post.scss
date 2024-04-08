@@ -1,0 +1,54 @@
+.Post {
+  width: 500px;
+  border-radius: 8px;
+  margin: 16px auto;
+  padding: 1em;
+  text-align: left;
+  background-color: #1d1d1d;
+  height: 350px;
+  overflow-y: auto;
+  color: bisque;
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.Link {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: royalblue;
+  margin-top: 40px;
+  font-size: 22px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    width: 42%;
+    background-color: royalblue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  &::after {
+    right: 0;
+    left: auto;
+  }
+}
+
+.buttons {
+  width: 500px;
+  padding: 1em;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 6px;
+  }
+}

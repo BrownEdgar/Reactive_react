@@ -15,8 +15,17 @@ header {
       justify-content: end;
       align-items: center;
       gap: 20px;
+      height: 100%;
       li {
         font-size: 20px;
+        a {
+          &.active__link {
+            padding-bottom: 10px;
+            color: rgb(72, 233, 23);
+            text-decoration: overline underline;
+            text-underline-offset: 10px;
+          }
+        }
       }
     }
   }
