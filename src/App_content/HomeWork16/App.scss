@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+    label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    select {
+      width: 200px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+  
+      option {
+        padding: 5px;
+      }
+    }
+  
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+  
+  .user-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+  
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+  
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+span {
+  width: 200px;
+  height: 35px;
+  margin-left: 120px;
+  display: flex;
+  align-items: center;
+  // margin: 2px;
+  cursor: pointer;
+  padding: 1em;
+  background: rgb(43, 43, 43);
+  position: relative;
+  color: white;
+  border-radius: 5px;
+}
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
+  width: 105%;
+  transition: all 0.4s;
+}
+span::before {
+  left: 0%;
+  height: 130%;
+  background: linear-gradient(to right, #021B79, #0575E6);
+}
+span::after {
+  left: -10%;
+  height: 120%;
+  background: #ffffff56;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+span:hover::before {
+  transform: translateX(-2.5%);
+}
+span:hover::after {
+  transform: translateX(15%);
+}
