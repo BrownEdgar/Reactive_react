@@ -25,7 +25,7 @@ function App() {
                             <h2>{post.title}</h2>
                             <p>{post.body}</p>
                             <button>
-                                <i class="bx bx-trash"></i>
+                              <i class="bx bx-trash"></i>
                             </button>
                         </div>
                     );
