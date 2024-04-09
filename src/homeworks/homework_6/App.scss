@@ -1,0 +1,91 @@
+body{
+	background-color: #eee;
+}
+
+.App{
+  .form{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 600px;
+    border-radius: 20px;
+		border: 0;
+    padding: 1em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    &__email, &__userName, &__password{
+      display: flex;
+      flex-direction: column;
+      height: 130px;
+
+      input{
+        padding: 1.3rem;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+    }
+    &__password{
+      position: relative;
+      i{
+        position: absolute;
+        right: 15px;
+        top: 40px;
+        font-size: 25px;
+        color: royalblue;
+      }
+    }
+    input[type='submit']{
+      border-radius: 8px;
+      padding: 1.3rem;
+      border: 0;
+      cursor: pointer;
+      background-color: rgb(55, 181, 55);
+      color: #fff;
+      font-size: 22px;
+    }
+    .error{
+			background-color: red;
+			color: #fff;
+			padding: 0.6rem 1rem;
+			border-radius:  0 0 15px 15px;
+			margin-top: 0;
+		}
+  }
+  .data{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+    &__user{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__info{
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 0;
+      padding: 1em 0.6em;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    &__saved{
+      padding: 0.6rem 1.3rem;
+      background-color: aqua;
+      border: 3px dashed darkblue;
+      border-radius: 8px;
+    }
+    &__password{
+      i{
+        font-size: 20px;
+        color: royalblue;
+      }
+    }
+  }
+}  
+    

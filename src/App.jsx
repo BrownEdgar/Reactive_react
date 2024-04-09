@@ -1,22 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import {Routes, Route} from 'react-router-dom'
+import ROUTES from './routes'
 
-
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
+export default function App() {
   return (
     <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-      <button onClick={handleClick}>count: {count} </button>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus nisi ipsum omnis modi magni quaerat necessitatibus excepturi nemo id sequi nesciunt, architecto suscipit minima labore quo distinctio aspernatur fugiat molestias optio reprehenderit perspiciatis? Deserunt nam reprehenderit tenetur veniam veritatis?</p>
+      <Navbar/>
+      <Routes>
+        <Route path={ROUTES.HOME}>
+          <Route index element={<Home/>}/>
+          <Route path={ROUTES.NEWS} element={<News/>}/>
+          <Route path={ROUTES.PRODUCTS} element={<Products/>}/>
+          <Route path={ROUTES.CONTACT} element={<Contact/>}/>
+        </Route>
+      </Routes>
     </div>
   )
 }
-
-export default App
