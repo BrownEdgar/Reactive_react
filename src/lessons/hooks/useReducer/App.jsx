@@ -1,32 +1,25 @@
 import React, { useReducer } from 'react'
 import "./App";
+import reducer, { initianState } from './reducer';
+import { PUSH, SORT, PLUS } from './actionTypes';
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'plus': return state + action.payload;
-    case 'minus': return state - 1;
-
-    default: return state;
-
-  }
-}
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, 0);
+  const [state, dispatch] = useReducer(reducer, initianState);
 
 
   const handleClick = () => {
-    dispatch({ type: 'plus', payload: 4 })
+    dispatch({ type: PUSH, payload: 4 })
   }
   const handleClick2 = () => {
-    dispatch({ type: 'minus' })
+    dispatch({ type: PLUS })
   }
 
   return (
     <div className='App'>
-      <h1>State: {state}</h1>
-      <button onClick={handleClick2}>MINUS</button>
-      <button onClick={handleClick}>PLUS</button>
+      <h1>State: {JSON.stringify(state)}</h1>
+      <button onClick={handleClick2}>PLUS</button>
+
     </div>
   )
 }
