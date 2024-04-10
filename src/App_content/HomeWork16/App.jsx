@@ -37,7 +37,7 @@ const App = () => {
               </option>
             ))}
           </select>
-          <input type="submit" value="Select" />
+          <input type="submit" value="Confirm" />
         </form>
   
         {userId && (
@@ -48,21 +48,21 @@ const App = () => {
                 <li key={user.id}>
                     <span>ID: {user.id} - {user.name}</span>
                     <br />
-                    <span>Username:{user.username}</span>
+                    <span>Username: {user.username}</span>
                     <br />
-                    <span>Email:{user.email}</span>
+                    <span>Email: {user.email}</span>
                     <br />
-                    <span>Address:{user.address.street}</span>
+                    <span>Address: {user.address.street}</span>
                     <br />
-                    <span>Suite:{user.address.suite}</span>
+                    <span>Suite: {user.address.suite}</span>
                     <br />
-                    <span>City:{user.address.city}</span>
+                    <span>City: {user.address.city}</span>
                     <br />
-                    <span>Zipcode:{user.address.zipcode}</span>
+                    <span>Zipcode: {user.address.zipcode}</span>
                     <br />
-                    <span>Phone:{user.phone}</span>
+                    <span>Phone: {user.phone}</span>
                     <br />
-                    <span>Website:{user.website}</span>
+                    <span>Website: {user.website}</span>
                 </li>
               ))}
             </ul>
