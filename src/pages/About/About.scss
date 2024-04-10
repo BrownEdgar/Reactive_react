@@ -1,0 +1,14 @@
+@mixin bgRules(){
+    background-image: url("./images/About.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 90%;
+}
+
+.About{
+    text-align: center;
+    @include bgRules();  
+    min-height: calc(100vh - 50px);
+}

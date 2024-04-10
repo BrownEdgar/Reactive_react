@@ -1,0 +1,28 @@
+{
+    "Categories":[
+        {
+            "id":1,
+            "title":"Armchair",
+            "desc":"One item",
+            "poster":"./images/Armchair.avif"
+        },
+        {
+            "id":2,
+            "title":"Chairs",
+            "desc":"2 items",
+            "poster":"./images/Chairs.avif"
+        },
+        {
+            "id":3,
+            "title":"Sofs",
+            "desc":"7 items",
+            "poster":"./images/chair.avif"
+        },
+        {
+            "id":4,
+            "title":"Sofa",
+            "desc":"5 items",
+            "poster":"./images/sofa.avif"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+.App{
+    display: flex;
+    justify-content: center;
+    
+   input{
+    width: 800px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+   }
+   th{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   }
+   tr{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   }
+}

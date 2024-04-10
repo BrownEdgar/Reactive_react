@@ -1,0 +1,14 @@
+@mixin bgRules(){
+    background-image: url("./images/News.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
+}
+
+.Contact{
+    text-align: center;
+    @include bgRules();  
+    min-height: calc(100vh - 50px);
+}
