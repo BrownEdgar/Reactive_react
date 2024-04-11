@@ -1,0 +1,57 @@
+.App {
+  margin: 3em;
+  display: flex;
+  &__input {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 2em;
+    border-right: 1px solid black;
+  }
+
+  &__inputData {
+    label {
+      font-size: 20px;
+    }
+    display: flex;
+    flex-direction: column;
+  }
+
+  #username {
+    padding: 1em;
+    border-radius: 6px;
+    border: 1px solid black;
+  }
+
+
+  &__form {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+      button {
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: 0;
+        background-color:rgb(27, 27, 255);
+        border-radius: 8px;
+      }
+  }
+
+  &__btns {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__Output {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+}
