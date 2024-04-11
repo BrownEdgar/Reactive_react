@@ -1,0 +1,28 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    &__btn{
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        form{
+            display: flex;
+            gap: 5px;
+            input{
+                padding: 1em;
+                border: 2px solid royalblue;
+                border-radius: 5px;
+            }
+        }
+        button{
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: none;
+            color: #fff;
+            background-color: royalblue;
+        }
+    }
+}
