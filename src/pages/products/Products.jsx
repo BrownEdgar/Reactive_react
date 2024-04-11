@@ -12,16 +12,17 @@ export default function Products() {
   })
   
   return (
-    <div className='Products'>
-      {data.map((elem) => {
-        return (
-          <Link key={elem.id}>
-            <h1>{elem.title}</h1>
-            <img src={elem.image} alt="" />
-          </Link>
-        )
-          
-      })}
-    </div>
+    <section className='Products'>
+      <div className='Products__container'>
+        {data.map((elem) => {
+          return (
+            <Link key={elem.id}>
+              <h1>{elem.title}</h1>
+              <img src={elem.image} alt="" />
+            </Link>
+          )
+        })}
+      </div>
+    </section>
   )
 }
