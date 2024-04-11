@@ -1,31 +1,40 @@
 header{
-    width: 100%;
-    position: fixed;
-    color: #fff;
-    padding: 1em 2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .bahery{
-        background-color: #eee;
-        font-size: 1.7em;
-        font-family: "Pacifico", cursive;
-    }
-    a{
-        color: inherit;
-    }
-    nav{
-        width: 45%;
-        min-width: 300px;
-        height: 100%;
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            gap: 20px;
-            li{
-                font-size: 25px
-            }
+  width: 100%;
+  position: fixed;
+  color: #000000;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .bahery{
+    font-size: 2em;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    
+  }
+  a{
+    color: inherit;
+  }
+  nav{
+    width: 45%;
+    min-width: 300px;
+    height: 100%;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 50px;
+      li{
+        font-size: 25px;
+        list-style: none;
+        a{
+          color: inherit;
+          &.active{
+            color: rgb(0, 233, 4);
+            text-decoration: underline;
+          }
         }
+      }
     }
+  }
 }

@@ -1,11 +1,28 @@
-section{
-  height: 100vh;
-  > [class*="__container"]{
-    width: 100%;
-    height: 100%;
+.Products{
+  &__container{
     display: flex;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
+    & > a{
+      padding: 1rem;
+      flex-basis: 45%;
+      border: 2px solid magenta;
+      border-radius: 10px;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      h1{
+        color: black;
+        font-size: 25px;
+      }
+      img{
+        width: 500px;
+        height: 200px;
+        object-fit: contain;
+      }
+    }
     h1{
       text-align: center;
       color: #fff;

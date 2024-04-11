@@ -17,8 +17,8 @@ export default function Products() {
         {data.map((elem) => {
           return (
             <Link key={elem.id}>
-              <h1>{elem.title}</h1>
               <img src={elem.image} alt="" />
+              <h1>{elem.title}</h1>
             </Link>
           )
         })}
