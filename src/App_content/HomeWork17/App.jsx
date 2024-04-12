@@ -46,16 +46,16 @@ const initialState = {
       }));
     };
   
-    const handleChangeUserName = (e) => {
-      const newName = e.target.value;
-      setState((prevState) => ({
-        ...prevState,
-        user: {
-          ...prevState.user,
-          name: newName
-        }
-      }));
-    };
+    // const handleChangeUserName = (e) => {
+    //   const newName = e.target.value;
+    //   setState((prevState) => ({
+    //     ...prevState,
+    //     user: {
+    //       ...prevState.user,
+    //       name: newName
+    //     }
+    //   }));
+    // };
   
     // const handleAddUserAge = () => {
     //   const age = Math.floor(Math.random() * 50) + 18;
@@ -79,7 +79,7 @@ const initialState = {
             <button onClick={handleRemoveSmallItems}>Delete items less than 10</button>
           </div>
           <h2>User Information</h2>
-          <input type="text" value={state.user.name} onChange={handleChangeUserName} />
+          {/* <input type="text" value={state.user.name} onChange={handleChangeUserName} /> */}
           {/* <button onClick={handleAddUserAge}>Add Age</button> */}
         </div>
         <div className="list">
