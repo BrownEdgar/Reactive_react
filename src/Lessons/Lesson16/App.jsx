@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react'
 import './App.scss'
-import reducer from './reducer'
 
 function reducer(state, action) {
     switch (action.type) {
