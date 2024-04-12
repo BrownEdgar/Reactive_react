@@ -22,7 +22,7 @@ const App = () => {
       e.preventDefault();
     };
   
-    const filteredUsers = users.filter((user) => user.id <= parseInt(userId));
+    const filteredUsers = users.filter((user) => user.id == parseInt(userId));
   
     return (
       <div>
