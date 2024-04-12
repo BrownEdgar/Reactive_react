@@ -7,7 +7,7 @@ export default function Products() {
 
   useEffect(() => {
     axios('https://fakestoreapi.com/products')
-      .then(data => setPosts(data))
+      .then(res => setPosts(res.data))
   }, [])
 
   return (
@@ -15,10 +15,12 @@ export default function Products() {
       {
         posts.map((elem) => {
           return (
-            <Link key={elem.id}>
-              <h2>{elem.title}</h2>
-              <img src={elem.image} alt="" />
-            </Link>
+            <div key={elem.id}>
+              <Link key={elem.id} to={`${elem.id}`}>
+                <img src={elem.image} alt="" />
+                <h2>{elem.title}</h2>
+              </Link>
+            </div>
           )
         })
       }

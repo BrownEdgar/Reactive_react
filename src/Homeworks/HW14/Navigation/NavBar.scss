@@ -1,9 +1,9 @@
 header {
   width: 100%;
-  background-color: #222;
-  position: fixed;
+  background: transparent;
+  // position: fixed;
   padding: 1em 2em;
-  color: #8e7979;
+  color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@ header {
         text-transform: uppercase;
         a {
           color: inherit;
-          &.active__link {
+          &.active {
             color: green;
             text-decoration: overline underline;
             text-underline-offset: 10px;
@@ -33,7 +33,6 @@ header {
   }
   .logo {
     font-size: 0.6em 1em;
-    background-color: white;
     color: #1d1d1d;
     padding: 2px;
     a {
