@@ -1,0 +1,54 @@
+body{
+  background-color: magenta;
+}
+
+.Product{
+  margin: 50px auto;
+  padding: 1em;
+  color: #000;
+  &__content{
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    background-color: #eee;
+    img{
+      width: 800px;
+      height: 500px;
+    }
+    a{
+      margin: auto;
+      margin-top: 30px;
+      font-size: 18px;
+      color: inherit;
+      text-decoration: underline;
+      &:hover{
+        color: magenta;
+      }
+    }
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    h2{
+      font-weight: 800;
+      text-align: center;
+      color: magenta;
+    }
+    p{
+      font-size: 18px;
+      text-align: justify;
+      color: black;
+    }
+    span{
+      font-size: 21px;
+      color: rgb(50, 152, 55);
+    }
+  }
+  &__category{
+    margin-top: 30px;
+    font-size: 25px;
+    color: black;
+  }
+}

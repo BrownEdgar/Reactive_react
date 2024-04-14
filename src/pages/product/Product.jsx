@@ -17,13 +17,15 @@ export default function Product() {
     <div className='Product'>
       <div className="Product__content">
 				<img src={product.image} alt="" />
-				<div className="Product__text">
-					<h2>{product.title}</h2>
-					<p>{product.description}</p>
-					<span>{product.price}</span>
-				</div>
-				<div className='Product__category'>
-					<h3>Category{product.category}</h3>
+				<div className='Product__body'>
+					<div className="Product__text">
+						<h2>{product.title}</h2>
+						<p>{product.description}</p>
+						<span>Price: ${product.price}</span>
+					</div>
+					<div className='Product__category'>
+						<h3>Category{product.category}</h3>
+					</div>
 				</div>
 				<Link to={ROUTES.PRODUCTS}>All products</Link>
 			</div>

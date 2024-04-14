@@ -1,39 +1,39 @@
 .App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  &__form{
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    form{
+      display: flex;
+      gap: 5px;
+      input{
+        padding: 1em;
+        border: 2px solid royalblue;
+        border-radius: 5px;
+      }
+    }
+    button{
+      padding: 0.6em 1em;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      background-color: royalblue;
+      font-size: 18px;
+      transition: 0.4s;
+      cursor: pointer;
+      &:hover{
+        scale: 0.9;
+      }
+    }
+  }
+  &__btn{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    &__form{
-        display: flex;
-        gap: 70px;
-        flex-direction: column;
-        form{
-            display: flex;
-            gap: 5px;
-            input{
-                padding: 1em;
-                border: 2px solid royalblue;
-                border-radius: 5px;
-            }
-        }
-        button{
-            padding: 0.6em 1em;
-            border-radius: 8px;
-            border: none;
-            color: #fff;
-            background-color: royalblue;
-            font-size: 18px;
-            transition: 0.4s;
-            cursor: pointer;
-            &:hover{
-                scale: 0.9;
-            }
-        }
-    }
-    &__btn{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+    gap: 20px;
+  }
 }
