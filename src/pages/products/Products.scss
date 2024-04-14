@@ -1,4 +1,9 @@
+body{
+  background-color: magenta;
+}
+
 .Products{
+  margin-top: 150px;
   &__container{
     display: flex;
     align-items: center;
@@ -7,12 +12,12 @@
     justify-content: center;
     & > a{
       padding: 1rem;
-      flex-basis: 45%;
-      border: 2px solid magenta;
+      flex-basis: 35%;
       border-radius: 10px;
       text-align: justify;
       display: flex;
       flex-direction: column;
+      background-color: #fff;
       h1{
         color: black;
         font-size: 25px;

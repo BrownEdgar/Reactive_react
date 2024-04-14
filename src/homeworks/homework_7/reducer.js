@@ -10,10 +10,11 @@ export const initialState = {
 }
 
 const solution = {
-  RandomPush() {
+  randomPush() {
     const random = Math.ceil(Math.random() * (1000 - 100) + 100)
+    return random
   },
-  Shuffle(...arr) {
+  shuffle(...arr) {
     const shufArray = arr.toSorted(() => Math.random() - 0.5);
     return [...shufArray]
   },
@@ -31,15 +32,14 @@ const solution = {
   }
 }
 
-function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case RANDOMPUSH: return{...state, arr: [...state.arr, solution.RandomPush()]}
-    case SHUFFLE: return{...state, arr: solution.Shuffle(...state.arr)}
+    case RANDOMPUSH: return{...state, arr: [...state.arr, solution.randomPush()]}
+    case SHUFFLE: return{...state, arr: solution.shuffle(...state.arr)}
     case DELETE: return{...state, arr: solution.deletArray(...state.arr)}
     case REPLACE: return{...state, user: solution.replace(state.user, 'Ero')}
     case PUSH: return{...state, user: solution.pushAge(state.user, 18)}
     case ADDUSER: return{...state, developers: [...state.developers, action.payload]}
-      
       
     default: return state;
   }

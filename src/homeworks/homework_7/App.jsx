@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import './App.scss'
 import { ADDUSER, DELETE, PUSH, RANDOMPUSH, REPLACE, SHUFFLE } from './type'
-import { initialState } from './reducer'
+import reducer, { initialState } from './reducer'
 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -35,12 +35,12 @@ export default function App() {
   return (
     <div className='App'>
       <h1>{JSON.stringify(state)}</h1>
-      <div className="App__btn">
+      <div className="App__form">
         <form onSubmit={toggleUser}>
           <input type="text" placeholder='username' name='username' />
           <button type='submit'>Add User</button>
         </form>
-        <div>
+        <div className='App__btn'>
           <button onClick={toggleRandom}>Random Number</button>
           <button onClick={toggleShuffle}>Shuffle</button>
           <button onClick={handleDelete}>Delete</button>
