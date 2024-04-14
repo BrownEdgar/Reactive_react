@@ -16,7 +16,7 @@ export default function Products() {
       <div className='Products__container'>
         {data.map((elem) => {
           return (
-            <Link key={elem.id}>
+            <Link key={`${elem.id}`}>
               <img src={elem.image} alt="" />
               <h1>{elem.title}</h1>
             </Link>
