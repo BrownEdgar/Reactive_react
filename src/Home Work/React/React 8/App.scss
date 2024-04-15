@@ -1,0 +1,54 @@
+.App{
+  padding: 2em;
+  margin-left: 100px;
+  
+  &__title{
+    margin-bottom: 5%;
+    font-size: 48px;
+    color: rgb(31, 30, 30);
+  }
+  .name{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  &__name{
+    display: flex;
+    margin-bottom: 20px;
+    
+    &-field{
+      width: 40%;
+      height: 35px;
+    }
+  }
+  &__address{
+    display: flex;
+    &-number{
+      width: 156px;
+    }
+    &-floor{
+      width: 156px;
+    }
+  }
+  &__info{
+    width: 620px;
+    flex-wrap: wrap;
+
+    &-field{
+      width: 50%;
+      height: 35px;
+    }
+    select{
+      width: 310px;
+      height: 40px;
+    }
+  }
+  &__submit{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}

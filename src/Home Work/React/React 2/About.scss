@@ -1,0 +1,88 @@
+.About{
+  &__ullist{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 80px  ;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+  }
+  &__list-one{
+    font-weight: 500;
+    font-size: 28px;
+    position: absolute;
+    left: -100px;
+    text-align: center;
+    margin-left: 280px;
+
+  }
+  &__list{
+    font-weight: 500;
+    font-size: 28px;
+    position: relative;
+    left: 20px;
+    text-align: center;
+    margin-left: 200px;
+  }
+  &__body{
+    border: 1px solid grey;
+  }
+  &__ullist-body{
+    list-style: none;
+    position: relative;
+    right: 130px;
+    font-size: 22px;
+    margin-bottom: -50px;
+  }
+  &__ullist-bodytwo{
+    width: 50px;
+    list-style: none;
+    font-size: 22px;
+    position: relative;
+    left: 290px;
+    top: 15px;
+    margin-bottom: -40px;
+  }
+  &__ullist-bodytree{
+    width: 50px;
+     list-style: none;
+    font-size: 22px;
+    position: relative;
+    left: 590px;
+    top: 20px;
+  }
+  &__ullist-bodyfor{
+     width: 50px;
+     list-style: none;
+     position: relative;
+     left: 840px;
+     bottom: 40px;
+    font-size: 22px;
+    top: -15px;
+    
+  }
+  &__list-body{
+    margin-left: 250px;
+  }
+  &__list-bodytwo{
+    border: 1px solid black;
+    width: 50px;
+    margin-left: 200px;
+  }
+  &__btn{
+    position: relative;
+    top: 35px;
+    left: 1280px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(211, 38, 38);
+    color: whitesmoke;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+  }
+
+}

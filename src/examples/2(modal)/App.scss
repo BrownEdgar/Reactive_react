@@ -1,0 +1,27 @@
+.App {
+  &__posts {
+    display: flex;
+    gap: 30px;
+    justify-content: start;
+    flex-wrap: wrap;
+    & > div {
+      padding: 1em;
+      border-radius: 12px;
+      color: #fff;
+      flex-basis: 30%;
+      position: relative;
+      background-image: linear-gradient(to top right, #0d9488, #042f2e);
+      h2 {
+        font-weight: 200;
+      }
+      i {
+        position: absolute;
+        font-size: 36px;
+        top: 2px;
+        right: 2px;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 1em;
+  margin: 50px auto;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: royalblue;
+  color: #fff;
+  font-size: 22px;
+  min-width: 100px;
+  transition: all 0.3s;
+  &-active {
+    background-color: rgb(186, 22, 10);
+    scale: 1.2;
+  }
+}

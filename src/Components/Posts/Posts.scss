@@ -1,0 +1,15 @@
+.Posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  & > div {
+    padding: 1em;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 56%, rgba(91, 89, 89, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    color: #fff;
+    & > h2 {
+      color: gray;
+      height: 100px;
+    }
+  }
+}
