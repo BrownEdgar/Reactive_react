@@ -1,3 +1,4 @@
+
 export const initialState = {
   arr: [98, 32, 90, 5, 43, 12, 12, 98, 484],
   todos: [],
@@ -12,15 +13,15 @@ export const initialState = {
   total: 18
 }
   const Sorted = (state,sortarr) => {
-    return sortarr === 'sort' ?
-    state.toSort((a,b) => a-b):
-    state.toSort((a,b) => b-a)
+    return sortarr === 'sorted' ?
+    state.toSorted((a,b) => a-b):
+    state.toSorted((a,b) => b-a)
   }
 
 function reducer(state =  initialState,action) {
   switch (action.type) {
     case 'add-todos':return {...state, todos:action.payload}
-    case SORT: return getSort(state, action.payload) 
+    case 'sort': return Sorted(state, action.payload) 
     default: return state;
   }
 }
