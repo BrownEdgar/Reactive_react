@@ -11,11 +11,16 @@ const initialState = {
   ],
   total: 18
 }
+  const Sorted = (state,sortarr) => {
+    return sortarr === 'sort' ?
+    state.toSort((a,b) => a-b):
+    state.toSort((a,b) => b-a)
+  }
 
 function reducer(state =  initialState,action) {
   switch (action.type) {
     case 'add-todos':return {...state, todos:action.payload}
-  
+    case SORT: return getSort(state, action.payload) 
     default: return state;
   }
 }
