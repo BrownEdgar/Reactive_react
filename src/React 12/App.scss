@@ -1,5 +1,15 @@
 .App{
+  background-color: rgb(1, 1, 19);
+  padding: 1em;
   code{
-    background-color: black;
+    white-space: pre-line;
+    color: whitesmoke;
+    font-size: 18px;
+  }
+  button{
+    background-color: red;
+    position: absolute;
+    top: 250px;
+    left: 150px;
   }
 }

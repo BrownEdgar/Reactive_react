@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   arr: [98, 32, 90, 5, 43, 12, 12, 98, 484],
   todos: [],
   products: [
