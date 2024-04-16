@@ -1,0 +1,49 @@
+.slick{
+    &-slider{
+        height: 450px;
+    }
+    &-list{
+        height: 100%;
+    }
+    &-track{
+        height: 100%;
+    }
+    &-slide{
+        div{
+            .data{
+                position: relative;
+                img{
+                    height: 200px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .content{
+                    border: 1px solid rgba(240, 214, 214, 0.911);
+                    border-radius: 6px;
+                    width: 400px;
+                    text-align: center;
+                    margin-top: 7%;
+                }
+            }
+        }
+    }
+}
+
+button{
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: indigo;
+    color: white;
+    margin-left: 46%;
+    margin-top: 5%;
+}
+
+
+
+
+.slick-prev::before,
+.slick-next::before{
+    color: indigo;
+    font-size: 40px;
+    
+}

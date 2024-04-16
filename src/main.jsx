@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './useReducer/App'
+import App from './examples/slider/App'
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css'
 
