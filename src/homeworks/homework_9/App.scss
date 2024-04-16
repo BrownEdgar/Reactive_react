@@ -1,0 +1,26 @@
+.slick{
+	&-slider{
+		height: 600px;
+	}
+	&-list{
+		height: 100%;
+	}
+	&-track{
+		height: 100%;
+	}
+	&-prev, &-next{
+		font-size: 22px;
+	}
+	&-slide{
+		div{
+			.star{
+				position: relative;
+				img{
+					position: absolute;
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}

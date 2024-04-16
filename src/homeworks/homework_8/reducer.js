@@ -33,8 +33,7 @@ export const initialState = {
 
 const costums = {
   handledelete(products, id) {
-    const newProducts = products.filter(elem => elem.id !== id  )
-    return [...newProducts]
+    return products.filter(elem => elem.id !== id  )
   },
   handleSort(...arr){
     const newArr = arr.toSorted((a,b) => a - b)
@@ -45,7 +44,7 @@ const costums = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case 'add-todos': return{...state, todos: action.payload}
-    case 'delete': return{...state, products: costums.handledelete(...state.products)}
+    case 'delete': return{...state, products: costums.handledelete(state.products, action.payload)}
     case 'sort': return {...state, arr: costums.handleSort(...state.arr)}
     
     default:

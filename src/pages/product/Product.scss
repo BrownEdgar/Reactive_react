@@ -1,10 +1,12 @@
 body{
-  background-color: magenta;
+  background-color: purple;
 }
 
 .Product{
   margin: 50px auto;
-  padding: 1em;
+  margin-top: 200px;
+  width: 1000px;
+  padding: 2em;
   color: #000;
   &__content{
     display: flex;
@@ -12,17 +14,19 @@ body{
     border-radius: 8px;
     background-color: #eee;
     img{
-      width: 800px;
-      height: 500px;
+      width: 600px;
+      height: 400px;
+      object-fit: contain;
     }
     a{
       margin: auto;
       margin-top: 30px;
-      font-size: 18px;
+      font-size: 20px;
       color: inherit;
       text-decoration: underline;
+      text-align: center;
       &:hover{
-        color: magenta;
+        color: purple;
       }
     }
   }
@@ -34,7 +38,7 @@ body{
     h2{
       font-weight: 800;
       text-align: center;
-      color: magenta;
+      color: purple;
     }
     p{
       font-size: 18px;
@@ -42,13 +46,14 @@ body{
       color: black;
     }
     span{
-      font-size: 21px;
+      font-size: 24px;
       color: rgb(50, 152, 55);
+      font-weight: 800;
     }
   }
   &__category{
-    margin-top: 30px;
     font-size: 25px;
     color: black;
+    text-align: center;
   }
 }

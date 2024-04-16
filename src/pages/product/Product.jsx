@@ -24,10 +24,10 @@ export default function Product() {
 						<span>Price: ${product.price}</span>
 					</div>
 					<div className='Product__category'>
-						<h3>Category{product.category}</h3>
+						<h3>{product.category}</h3>
 					</div>
+					<Link to={ROUTES.PRODUCTS}>All products</Link>
 				</div>
-				<Link to={ROUTES.PRODUCTS}>All products</Link>
 			</div>
     </div>
   )
