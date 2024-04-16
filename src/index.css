@@ -8,8 +8,14 @@
 }
 
 body {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
+  background-color: #fff7d4;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  /* overflow: hidden; */
 }

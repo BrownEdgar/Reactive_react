@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react'
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import reducer, { initialState } from './reduser';
 
@@ -8,9 +10,13 @@ function App() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        draggable: false,
+        slidesToShow: 2,
         slidesToScroll: 1,
+        arrows: true,
         fade: true,
+        pauseOnHover: false,
+        centerMode: true,
     };
      const [state, dispatch] = useReducer(reducer, initialState);
     return (
@@ -21,10 +27,10 @@ function App() {
                         return (
                             <div className='planet' key={planet.id}>
                                 <img src={planet.image} alt={planet.image} />
-                                <div>
+                                {/* <div>
                                     <h1>{planet.title}</h1>
                                     <p>{planet.desc}</p>
-                                </div>
+                                </div> */}
                             </div>
                         );
                     })
