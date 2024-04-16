@@ -1,6 +1,9 @@
 .slick{
 	&-slider{
-		height: 600px;
+		height: 400px;
+		margin-top: 300px;
+		background-color: #eee;
+		padding: 1em;
 	}
 	&-list{
 		height: 100%;
@@ -13,8 +16,11 @@
 	}
 	&-slide{
 		div{
+			margin: 10px;
 			.star{
 				position: relative;
+				border-radius: 10px;
+				border: 1px solid black;
 				img{
 					position: absolute;
 					width: 100%;
