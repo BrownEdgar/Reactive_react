@@ -1,40 +1,76 @@
 {
-  "sofas": [
+  "cities": [
     {
       "id": "1",
-      "name": "Ktaxon Accent Chair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_03.jpg"
+      "cityImage": "https://wallpapercave.com/wp/wp6860393.jpg",
+      "cityTitle": "Los Angeles",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 35560,
+      "cityComments": []
     },
     {
       "id": "2",
-      "name": "Chalton Armchair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_01.jpg"
+      "cityImage": "https://cdn.choosechicago.com/uploads/2022/09/Pink-skyline-with-out-logo.jpeg",
+      "cityTitle": "Chicago",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 23044,
+      "cityComments": []
     },
     {
       "id": "3",
-      "name": "Ktaxon Accent Chair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_02.jpg"
+      "cityImage": "https://worldstrides.com/wp-content/uploads/2015/07/iStock_000040849990_Large.jpg",
+      "cityTitle": "New York",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 30345,
+      "cityComments": []
     },
     {
       "id": "4",
-      "name": "Ktaxon Accent Chair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_04.jpg"
+      "cityImage": "https://wallpapers.com/images/hd/san-francisco-4k-bridge-city-view-n9trpmiphrabtmx8.jpg",
+      "cityTitle": "San Francisco",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 16799,
+      "cityComments": []
     },
     {
       "id": "5",
-      "name": "Ktaxon Accent Chair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_05.jpg"
+      "cityImage": "https://www.travelandleisure.com/thmb/_aMbik8KZYsUKc_6_XNeAOzPi84=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/boston-massachusetts-BOSTONTG0221-719aef2eeb1c4929b6c839715e34a69e.jpg",
+      "cityTitle": "Boston",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 12658,
+      "cityComments": []
     },
     {
       "id": "6",
-      "name": "Ktaxon Accent Chair",
-      "desc": "Ktaxon Accent Chair with Ottoman Set, Flannel Upholstered Single Sofa with Lumber Pillow Armchair with Armrests and Footrest for Bedroom Living Reading Room Office Beige",
-      "image": "./public/images/armchair_06.jpg"
+      "cityImage": "https://tripplanet.ru/wp-content/uploads/america/usa/miami/dostoprimechatelnosti-majami.jpg",
+      "cityTitle": "Miami",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 4753,
+      "cityComments": []
+    },
+    {
+      "id": "7",
+      "cityImage": "https://www.travelandleisure.com/thmb/ATskoUEBblzpBKlym1lPV4J1m-s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/san-diego-california-SDTG0221-7d1cfd65a826426d8cc7f6e41345ac19.jpg",
+      "cityTitle": "San Diego",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 27474,
+      "cityComments": []
+    },
+    {
+      "id": "8",
+      "cityImage": "https://triplook.me/media/resorts/photo/1/3/827.jpg",
+      "cityTitle": "Washington",
+      "cityDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore eius architecto beatae rerum voluptatibus nemo assumenda nisi cupiditate perferendis?",
+      "cityDate": "",
+      "cityLikes": 31784,
+      "cityComments": []
     }
   ]
 }

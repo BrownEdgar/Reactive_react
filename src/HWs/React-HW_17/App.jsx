@@ -13,8 +13,8 @@ export default function App() {
         Get Todos
       </button>
       <div>
-        {console.log(state.todos)}
-        {/* {state.todos.map((todo) => <h1>todo.title</h1>)} */}
+        {console.log(state)}
+        {state.todos.length ? state.todos.map((todo) => <h1 key={todo}>{todo}</h1>) : null}
       </div>
     </div>
   );

@@ -15,10 +15,11 @@ export const initialState = {
 };
 
 const getTodos = async () => {
-  const res = await axios(
+  let data;
+  axios(
     `https://jsonplaceholder.typicode.com/todos?_limit=${initialState.total}`
-  );
-  return res.data;
+  ).then((res) => (console.log(res.data)));
+  return data;
 };
 
 export const reducer = (state = initialState, action) => {

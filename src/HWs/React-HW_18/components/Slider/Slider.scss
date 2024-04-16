@@ -1,0 +1,140 @@
+.slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 3px solid rgba(255, 217, 0, 0.228);
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-top: 50px;
+
+  .slick-slider {
+    .slick-arrow {
+      &::before {
+        font-size: 2.5rem;
+        opacity: 0.5 !important;
+        transition: all 0.23s ease 0s;
+      }
+      &:hover::before {
+        opacity: 1 !important;
+      }
+      &.slick-prev {
+        left: -50px !important;
+      }
+      &.slick-next {
+        right: -30px !important;
+      }
+    }
+    .slick-slide {
+      &__wrapper {
+        display: flex !important;
+        min-height: 350px;
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+    }
+    .slick-dots {
+      bottom: -50px;
+      transition: all .23s ease 0s;
+      > li {
+        &.slick-active {
+          > button::before {
+            color: red;
+          }
+        }
+        > button {
+          &::before {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper-slide {
+  &__image {
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    &:hover {
+      > img {
+        scale: 1.05;
+        filter: brightness(100%) grayscale(0%);
+      }
+      > p {
+        bottom: 0px;
+      }
+    }
+    > img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      transition: all 0.23s ease 0s;
+      filter: brightness(80%) grayscale(100%);
+    }
+  }
+
+  &__comments {
+   
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    cursor: pointer;
+  }
+
+  &__desc {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: -100%;
+    z-index: 99;
+    transition: all 0.23s ease 0s;
+    background-color: #3333337a;
+    backdrop-filter: blur(1px);
+    padding: 1rem;
+    color: whitesmoke;
+    font-weight: 600;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+    padding-inline: 0.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 0.6rem;
+    & i {
+      font-size: 1.5rem;
+      transition: all 0.23s ease 0s;
+
+      &.bi-chat {
+        color: royalblue;
+        cursor: pointer;
+      }
+    }
+    > div {
+      display: flex;
+      gap: 6px;
+      > i {
+        cursor: pointer;
+        &.bi-heart {
+          color: red;
+          &-fill {
+            color: red;
+            text-shadow: 0px 0px 10px red;
+          }
+        }
+      }
+    }
+  }
+}
