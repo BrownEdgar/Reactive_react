@@ -24,8 +24,8 @@ export default function Product() {
           <h4>{products.category}</h4>
           <h5>{products.description}</h5>
           <p>Price - {products.price}</p>
-          {/* <p>Rate - {products.rating.rate}</p> */}
-          {/* <p>Count - {products.rating.count}</p> */}
+          <p>Rate - {products?.rating?.rate}</p>
+          <p>Count - {products?.rating?.count}</p>
         </div>
       </div>
       <Link className='Link' to={ROUT.PRODUCTS}>All Products</Link>
