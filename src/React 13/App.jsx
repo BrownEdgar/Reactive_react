@@ -2,6 +2,8 @@ import React, {  useReducer } from "react";
 import Slider from "react-slick";
 import './App.scss'
 import reducer,{initialState} from "./reducer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 export default function App() {
@@ -23,11 +25,11 @@ export default function App() {
       <div className="App">
         <Slider {...settings}>
          {
-          state.data.map(data => {
+          state.data.map(elem => {
             return(
-              <div key={data.id}>
-                <img src="{elem.Image}" alt="elem.title" />
-                <h1>{data.title}</h1>
+              <div key={elem.id}>
+                <img src={elem.Image} alt="elem.data" />
+                <h1>{elem.title}</h1>
               </div>
             )
           })

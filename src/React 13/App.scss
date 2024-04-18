@@ -1,17 +1,12 @@
 .App{
   .slick{
-    height: 100vh;
-    &-arrow{
-      background-color: red;
-      display: flex;
-    }
     &-list{
-      width: 100%;
-      border: 1px solid black;
-    }
-    &-track{
       
     }
-
+    &-track{
+      display: flex;
+      width: 50px;
+      height: 500px;
+    }
   }
 }
