@@ -29,8 +29,8 @@ export default function App() {
             return(
               <div key={elem.id}>
                 <img src={elem.Image} />
-                <p>{elem.title}</p>
-                <h4>{elem.data}</h4>
+                <h4>{elem.title}</h4>
+                <p>{elem.data}</p>
               </div>
             )
           })
