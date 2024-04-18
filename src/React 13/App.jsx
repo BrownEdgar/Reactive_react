@@ -28,8 +28,9 @@ export default function App() {
           state.data.map(elem => {
             return(
               <div key={elem.id}>
-                <img src={elem.Image} alt="elem.data" />
-                <h1>{elem.title}</h1>
+                <img src={elem.Image} />
+                <p>{elem.title}</p>
+                <h4>{elem.data}</h4>
               </div>
             )
           })

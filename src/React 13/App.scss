@@ -1,12 +1,61 @@
 .App{
-  .slick{
-    &-list{
-      
-    }
-    &-track{
+  width: 80%;
+  margin-top: 100px;
+  margin-left: 140px;
+  border: 1px solid black;
+ .slick {
+  &-slider {
+    max-height: 400px;
+  }
+
+  &-list{
+    height: 100%;
+  }
+
+  &-list{
+    height: 100%;
+  }
+
+  &-prev {
+    background-color: dimgray;
+    
+  }
+  &-next {
+    background-color: black !important;
+  }
+
+  &-track {
+    height: 100%;
+  }
+
+  &-slide {
+    margin: 20px auto;
+    div {
+      margin: 0;
       display: flex;
-      width: 50px;
-      height: 500px;
+      flex-direction: column;
+      width: 300px;
+      img {
+        margin: 0;
+        border: 1px solid black;
+        width: 300px;
+        height: 200px;
+      }
+
+      .text {
+        padding: 0.3em;
+        border: 1px solid black;
+        text-align: center;
+        
+      }
+      p{
+        text-align: center;
+      }
+      
+      h4 {
+        text-align: center;
+      }
     }
   }
+}
 }
