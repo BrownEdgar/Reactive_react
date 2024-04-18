@@ -26,7 +26,7 @@ export default function Product() {
 					<div className='Product__category'>
 						<h3>{product.category}</h3>
 					</div>
-					<Link to={ROUTES.PRODUCTS}>All products</Link>
+					<Link to={'/' + ROUTES.PRODUCTS}>All products</Link>
 				</div>
 			</div>
     </div>

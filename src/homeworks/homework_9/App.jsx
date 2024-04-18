@@ -9,6 +9,8 @@ export default function App() {
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplayedSpeed: 500,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1
@@ -17,7 +19,7 @@ export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <div>
+    <div className='App'>
 			<Slider {...settings}>
         {
           state.data.map(elem => {
@@ -30,6 +32,7 @@ export default function App() {
           })
         }
       </Slider>
+      <button className='App__btn'>View more</button>
 		</div>
   )
 }

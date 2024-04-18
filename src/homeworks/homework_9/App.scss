@@ -1,30 +1,53 @@
-.slick{
-	&-slider{
-		height: 400px;
-		margin-top: 300px;
-		background-color: #eee;
-		padding: 1em;
+body{
+	width: 1000px;
+}
+
+.App{
+	&__btn{
+		background-color: royalblue;
+		padding: 0.6rem 1rem;
+		border-radius: 8px;
+		margin: auto;
 	}
-	&-list{
-		height: 100%;
-	}
-	&-track{
-		height: 100%;
-	}
-	&-prev, &-next{
-		font-size: 22px;
-	}
-	&-slide{
-		div{
-			margin: 10px;
-			.star{
-				position: relative;
-				border-radius: 10px;
-				border: 1px solid black;
-				img{
-					position: absolute;
-					width: 100%;
-					object-fit: contain;
+	.slick{	
+		&-slider{
+			margin-top: 100px;
+			padding-left: 10px;
+			height: 400px;
+			padding: 1rem;
+			background-color: #eee;
+			padding: 1em;
+		}
+		&-list{
+			height: 100%;
+			width: 100%;
+		}
+		&-track{
+			height: 100%;
+		}
+		&-prev, &-next{
+			&::before{
+				font-size: 30px !important;
+				padding: 1em;
+				color: black;
+			}
+		}
+		&-slide{
+			div{
+				margin: 10px;
+				.star{
+					border-radius: 10px;
+					border: 1px solid black;
+					h1{
+						text-align: center;
+						font-weight: 700;
+					}
+					img{
+						width: 100%;
+						object-fit: contain;
+						border-top-left-radius: 10px;
+						border-top-right-radius: 10px;
+					}
 				}
 			}
 		}
