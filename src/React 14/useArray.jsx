@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function useArray() {
-  
-  const push =
+  const [data, setData] = useState(initialState)
+
+  const push = (elem) =>{
+    setData((state) => [...state, elem]) 
+  }
 
 
   return (
