@@ -1,0 +1,30 @@
+.App{
+	margin: 50px auto;
+	&__content{
+		padding: 1em;
+		display: flex;
+		gap: 30px;
+		flex-direction: column;
+	}
+	&__btn{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
+		width: 800px;
+		button{
+			padding: 0.6em 1em;
+			border-radius: 8px;
+			border: none;
+			color: #fff;
+			background-color: royalblue;
+			font-size: 18px;
+			transition: 0.4s;
+			cursor: pointer;
+			&:hover{
+				scale: 1.1;
+			}
+		}
+	}
+
+}    
