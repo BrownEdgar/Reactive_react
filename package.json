@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@finnaly/common": "^1.0.21",
     "@flaticon/flaticon-uicons": "^3.1.0",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "bootstrap-icons": "^1.11.3",
     "boxicons": "^2.1.4",
     "classnames": "^2.5.1",

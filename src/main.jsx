@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App_content/HomeWork19/App'
+import App from './App_content/HomeWork20/ArrayComponent'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 
