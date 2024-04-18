@@ -4,13 +4,13 @@ export const initialState = {
             id: 1,
             image: '/images/usa/1.jpg',
             title: "New-York",
-            desc: 'New York City traces its origins to Fort Amsterdam and a trading post founded on the southern',
+            desc: 'New York City traces its origins to Fort Amsterdam and a trading post.',
         },
         {
             id: 2,
             image: '/images/usa/2.jpg',
             title: "Sahara desert",
-            desc: 'The desert covers much of North Africa, excluding the fertile region on the Mediterranean Sea coast',
+            desc: 'The desert covers much of North Africa, excluding the fertile regio.',
         },
         {
             id: 3,
