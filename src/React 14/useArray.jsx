@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
-export default function useArray() {
-
-  const useArray  = (initialState) => {
+export default function useArray(initialState) {
     const [data, setData] = useState(initialState);
 
     const filter = (elem) => {
@@ -28,9 +26,5 @@ export default function useArray() {
 
 
     return { data, filter , push, remove, clear, set };
-  };
+  }
 
-  return (
-    <div>useArray</div>
-  )
-}
