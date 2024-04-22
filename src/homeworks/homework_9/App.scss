@@ -1,21 +1,20 @@
-body{
-	width: 1000px;
-}
-
 .App{
+	max-width: 1240px;
+	margin: 0 auto;
 	&__btn{
 		background-color: royalblue;
+		display: block;
 		padding: 0.6rem 1rem;
+		border: 0;
+		color: #eee;
 		border-radius: 8px;
-		margin: auto;
+		margin: 50px auto;
 	}
 	.slick{	
 		&-slider{
 			margin-top: 100px;
-			padding-left: 10px;
 			height: 400px;
 			padding: 1rem;
-			background-color: #eee;
 			padding: 1em;
 		}
 		&-list{
@@ -25,25 +24,31 @@ body{
 		&-track{
 			height: 100%;
 		}
-		&-prev, &-next{
+		&-arrow{
 			&::before{
 				font-size: 30px !important;
 				padding: 1em;
 				color: black;
 			}
 		}
+		&-prev{
+			left: -80px;
+		}
 		&-slide{
 			div{
 				margin: 10px;
 				.star{
+					overflow: hidden;
 					border-radius: 10px;
-					border: 1px solid black;
+					outline: 1px solid black;
+					outline-offset: -2px;
 					h1{
 						text-align: center;
 						font-weight: 700;
 					}
 					img{
 						width: 100%;
+						padding: 10px;
 						object-fit: contain;
 						border-top-left-radius: 10px;
 						border-top-right-radius: 10px;

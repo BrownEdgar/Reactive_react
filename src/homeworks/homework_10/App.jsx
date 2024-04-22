@@ -12,9 +12,9 @@ export default function App() {
         <h1>{JSON.stringify(aray)}</h1>
         <div className="App__btn">
           <button onClick={() => push(Math.ceil(Math.random() * (100 - 10) + 10))}>Push random</button>
-          <button onClick={clear}>Delete all</button>
           <button onClick={() => update(1, 9)}>To change</button>
-          <button onClick={ sort}>To sort</button>
+          <button onClick={clear}>Delete all</button>
+          <button onClick={sort}>To sort</button>
         </div>
       </div>
     </div>

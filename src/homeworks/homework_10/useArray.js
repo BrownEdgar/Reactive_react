@@ -18,10 +18,9 @@ export default function useArray(arr) {
   }
 
   const sort = (array) => {
-    setAray(() => {
-      const sortedArr = array.toSorted((a, b) => a - b)
+    setAray((prevArr) => {
+      return prevArr.toSorted((a, b) => a - b)
     })
-    return sortedArr
   }
 
   return {
