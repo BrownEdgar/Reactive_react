@@ -133,4 +133,13 @@
   &__item:hover &__layer {
     left: 50px;
   }
+
+  button {
+    background-color: #00CED1;
+    font-size: 15px;
+    color: #fff;
+    padding: 1em;
+    border: 0;
+    border-radius: 8px;
+  }
 }
