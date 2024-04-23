@@ -3,14 +3,18 @@ import { MyContext } from './App'
 
 export default function C() {
   const value = useContext(MyContext)
+  console.log(value);
   return (
     <div>
-      <h1>C commponents</h1>
-      <MyContext.Consumer >
-        <h1>
-          {value.title}
-        </h1>
-      </MyContext.Consumer>
+      {
+        value.map(elem => {
+          return (
+            <div key={elem}>
+             <h1>{elem.title}</h1>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }
