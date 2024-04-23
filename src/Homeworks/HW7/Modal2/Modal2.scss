@@ -1,0 +1,33 @@
+.Modal2 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: .8);
+  display: grid;
+  z-index: 10000000;
+  place-items: center;
+  overflow: hidden;
+  &__content {
+    width: 450px;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 16px;
+    color: #fff;
+    button {
+      padding: 0.6em 1em;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      margin: 10px;
+    }
+    .Modal2__btn-red {
+      background-color: rgb(206, 12, 12);
+
+    }
+    .Modal2__btn-green {
+      background-color: rgb(21, 77, 21);
+    }
+  }
+}

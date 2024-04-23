@@ -1,0 +1,24 @@
+.App {
+  padding: 2em;
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  &__btn {
+    display: flex;
+    button {
+      padding: 0.6em 1em;
+      background-color: red;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      margin-right: 10px;
+      &.active {
+        background-color: rgb(69, 188, 69);
+      }
+    }
+  }
+}

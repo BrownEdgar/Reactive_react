@@ -1,0 +1,32 @@
+.App {
+  max-width: 1440px;
+  user-select: none;
+  &__title {
+    font-size: 16px;
+  }
+  &__content {
+    text-align: center;
+    width: 900px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    & > th, td {
+      border: 1px solid black;
+      padding: 1em;
+    }
+    tr:hover {
+      background-color: gray;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+  }
+  &__btn {
+    padding: 0.6em 1em;
+    border: none;
+    background-color: red;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+

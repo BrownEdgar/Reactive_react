@@ -1,0 +1,32 @@
+.App {
+  width: 700px;
+}
+
+.App__title {
+  font-size: 16px;
+}
+
+.App__content {
+  text-align: center;
+  width: 900px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.App__btn {
+  padding: 0.6em 1em;
+  border: none;
+  background-color: red;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.App__content > th, td:hover {
+  background-color: gray;
+}

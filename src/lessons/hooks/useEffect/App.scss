@@ -1,0 +1,29 @@
+.App {
+  padding: 2rem;
+  margin: 50px auto;
+  &__posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    & > div {
+      padding: 1em;
+      border-radius: 0 0 12px 12px;
+      border-top: 8px solid orangered;
+      background-color: #dedede;
+      position: relative;
+      button {
+        background: transparent;
+        border: 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        i:hover {
+          scale: 1.1;
+          color: #ff0808;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

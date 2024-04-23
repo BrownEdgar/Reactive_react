@@ -1,0 +1,91 @@
+.Todos {
+  padding: 1em;
+  h1 {
+    padding: 1em;
+    text-align: center;
+  }
+  &__fother {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(10, 250px);
+    gap: 40px;
+
+  }
+
+  &__container {
+    position: relative;
+    padding: 1em;
+    border: 2px solid royalblue;
+    border-radius: 12px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  &__Delete {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+    color: rgb(255, 34, 0);
+    transition: 0.23s;
+
+    &:active {
+      scale: 1.3;
+    }
+  }
+
+  &__Done  {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+    color: rgb(47, 132, 47);
+    transition: 0.23s;
+
+    &:active {
+      scale: 1.3;
+    }
+  }
+
+  &__UserPart {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0.3em;
+    width: 90px;
+  }
+
+  &__user {
+    width: 80px;
+  }
+
+  &__deal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__complate {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+
+  &-completed {
+    color: rgb(47, 132, 47);
+  }
+  &-inProcess {
+    color: rgb(255, 34, 0);
+  }
+  }
+
+
+}

@@ -1,0 +1,98 @@
+.Sing {
+  p {
+    color: red;
+  }
+  .form {
+    border: 1px solid black;
+    min-width: 600px;
+    border-radius: 16px;
+    padding: 1em;
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px auto;
+    width: 500px;
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-size: 20px;
+
+      &-password {
+        position: relative;
+      }
+      input {
+        border: 1px solid black;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 1rem;
+      }
+
+      .bi {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        font-size: 25px;
+      }
+    }
+    input[type="submit"] {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 8px;
+      border: 0;
+      padding: 1rem;
+      background-color: rgb(50, 205, 50);
+    }
+
+    .see {
+      color: black;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+
+    a {
+      align-items: center;
+      width: 400px;
+      display: flex;
+      gap: 15px;
+      color: black;
+      border-radius: 32px;
+      padding: 1rem;
+      border: 2px solid black;
+
+      .bi {
+        cursor: pointer;
+        font-size: 25px;
+      }
+
+      .bi-google {
+        color: rgb(31, 170, 31);
+      }
+
+      .bi-facebook {
+        color: rgba(54, 54, 255, 0.969);
+      }
+    }
+  }
+}
+.Users__fix {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  padding: 1em;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin-top: 50px;
+  gap: 20px;
+}

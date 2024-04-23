@@ -1,0 +1,18 @@
+.App{
+    code{
+        height: 150px;
+        background-color: indigo;
+        color: wheat;
+        padding: 1em;
+        width: 550px;
+        margin: 20px auto;
+        white-space: wrap;
+        button{
+            background-color: royalblue;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    }
+}
