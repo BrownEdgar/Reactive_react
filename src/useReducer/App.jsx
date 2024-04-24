@@ -6,13 +6,7 @@ import { SORT } from './types'
 
 
 
-    
-    
-// const getSort = (state, sortType) => {
-//     return sortType === 'asc'
-//     ? state.toSorted((a, b) => a - b)
-//     : state.toSorted((a, b) => b - a)
-//   }
+  
 
 
 export default function App() {
@@ -20,9 +14,6 @@ export default function App() {
 
     useEffect(() => {
         axios('https://jsonplaceholder.typicode.com/todos', {
-            params:{
-                _limit: 18
-            }
         }).then(res => dispatch({type: 'add-todos', payload: res.data}))
     }, [])
 
