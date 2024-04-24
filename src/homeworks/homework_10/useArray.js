@@ -11,6 +11,18 @@ export default function useArray(arr) {
     setAray([])
   }
 
+  const delItem = (index) => {
+    setAray(() => {
+      return aray.toSpliced(index, 1)
+    })
+  }
+
+  const filter = (item) => {
+    setAray(() => {
+      return aray.filter(elem => elem < item)
+    })
+  }
+
   const update = (index, changeMember) => {
     setAray(() => {
       return aray.toSpliced(index, 1, changeMember)
@@ -24,6 +36,6 @@ export default function useArray(arr) {
   }
 
   return {
-    aray, push, clear, update, sort
+    aray, push, clear, update, sort, delItem, filter
   }
 }
