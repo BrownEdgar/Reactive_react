@@ -9,13 +9,13 @@
 
 body {
   display: flex;
-  height: 90vh;
+  height: 98vh;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
-  background-color: #fff7d4;
+  font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: weight;
   font-style: normal;
+  background-color: #fff7d4;
   /* overflow: hidden; */
 }
