@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default function useCount({ initialValue = 0, min = 0, max = 12 }) {
-  const [value, setValue] = useState(initialValue);
-
-  const plus = () => setValue(value < max ? value + 1 : max)
-  const minus = () => setValue(value > min ? value - 1 : min)
-
-  return [value, { plus, minus }]
+export default function useCount({ type = 'even', }) {
+  const [value] = useState(() => {
+    const random = Math.ceil(Math.random() * 100)
+    if (type === 'even') {
+      return random % 2 === 0 ? random : random + 1
+    } else if (type === 'odd') {
+      return random % 2 === 0 ? random + 1 : random
+    }
+  })
+  return value
 }
