@@ -44,12 +44,6 @@
   cursor: pointer;
  }
 
-  &__item:nth-child(2) {
-  --color: #813085;
- }
- &__item:nth-child(3) {
-  --color: #119630;
- }
 
  &__item::after {
   content: "";
@@ -134,7 +128,7 @@
     left: 50px;
   }
 
-  button {
+  &__seeMore {
     background-color: #00CED1;
     font-size: 15px;
     color: #fff;
@@ -142,4 +136,14 @@
     border: 0;
     border-radius: 8px;
   }
+
+   &__delete {
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+ }
 }

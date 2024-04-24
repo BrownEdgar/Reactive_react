@@ -9,17 +9,21 @@ export const MyContaxt = createContext("Something went wrong 😢, please advise
 export default function App() {
 
   const [data, setData] = useState([])
-  const [limit, setLimit] = useState(10)
+  const [limit, setLimit] = useState(12)
+  const [deleteById, setDeleteByid] = useState(null)
 
   const seeMore = () => {
-    setLimit(limit + 10)
+    setLimit(limit + 12)
     
+  }
+
+  const deleteTodo = (id) => {
+    setDeleteByid(data.filter(item => item.id !== id))
   }
 
   useEffect(() => {
     axios(`https://jsonplaceholder.typicode.com/todos?_limit=${limit}`)
     .then(res => setData(res.data))
-    console.log(limit);
   }, [limit] )
 
   
@@ -29,7 +33,7 @@ export default function App() {
 
     <div className='App'>
       <h1>Your todos</h1>
-      <MyContaxt.Provider value={{ data, limit, seeMore }}>
+      <MyContaxt.Provider value={{ data, limit, seeMore, deleteTodo }}>
         <Interval1/>
       </MyContaxt.Provider>
     </div>

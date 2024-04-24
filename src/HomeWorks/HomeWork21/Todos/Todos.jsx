@@ -4,13 +4,12 @@ import classNames from "classnames"
 import "./Todos.scss"
 
 export default function Todos() {
-  const value = useContext(MyContaxt) 
-  console.log(value);
+  const data = useContext(MyContaxt) 
   return (
     <div className='App'>
       <div className='App__container'>
       {
-        value.data.map((elem, index) => {
+        data.data.map((elem, index) => {
           return (
             <div className="App__content" key={elem.id}>
               <div className={classNames("App__item", {
@@ -26,13 +25,14 @@ export default function Todos() {
                   <span><i className="bi bi-mastodon"></i></span>
                 </div>
                 <h4>User {elem.id}</h4>
+                <button onClick={() => data.deleteTodo(elem.id)} className="App__delete" ><i className="bi bi-trash3-fill"></i></button>
               </div>
             </div>
           )
         })
       }
       </div>
-      <button onClick={value.seeMore}>See More</button>
+      <button onClick={data.seeMore} className="App__seeMore" >See More</button>
 
     </div>
   )
