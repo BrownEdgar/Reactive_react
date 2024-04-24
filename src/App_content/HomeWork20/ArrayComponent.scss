@@ -1,5 +1,18 @@
+body {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffea8e;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .Array {
     background-color: #333;
+    border-radius: 12px;
     width: 1120px;
     .Arr {
         text-align: center;
