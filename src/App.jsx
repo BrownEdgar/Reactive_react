@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTodos, saveTodos } from './features/todos/todosSlice'
+import axios from 'axios'
+import './App.scss'
 
 export default function App() {
   const todos = useSelector(getTodos);
   const dispatch = useDispatch()
 
   useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/todos')
+    axios({
+      baseURL: 'https://jsonplaceholder.typicode.com',
+      url: 'todos', 
+      params: {
+        _limit: 20
+      }
+    })
     .then(res => dispatch(saveTodos(res.data)))
   })
   return (
@@ -19,9 +27,6 @@ export default function App() {
             return (
               <div key={todos.id}>
                 <h2>{todos.title}</h2>
-                <button onClick={() => value.handleDelete(todos.id)}>
-                  <i className="bi bi-x-circle-fill"></i>
-                </button>
               </div>
             )
           })
