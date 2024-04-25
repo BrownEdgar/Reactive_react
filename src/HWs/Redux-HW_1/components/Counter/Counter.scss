@@ -1,0 +1,73 @@
+.counter {
+  margin-bottom: 2rem;
+  background-color: #333;
+  padding-block: 3rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #222;
+    max-width: 30%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    word-break: break-all;
+  }
+
+  span {
+    font-size: 7rem;
+    flex-basis: 100%;
+    color: gold;
+    text-align: center;
+    transition: all 0.23s ease 0s;
+
+    &.changed_positive {
+      scale: 1.1;
+      color: greenyellow;
+    }
+
+    &.changed_negative {
+      scale: 0.9;
+      color: red;
+    }
+  }
+
+  button {
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 0.8rem;
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border: 2px solid rgba(255, 255, 255, 0.29);
+    cursor: pointer;
+    transition: all 0.23s ease 0s;
+    box-shadow: 0px 0px 10px inset #3333336d,
+    -4px 4px 10px rgba(255, 217, 0, 0.1);
+    margin: 1rem 5px 0px 5px;
+
+    &.plus-btn {
+      background-color: rgb(0, 179, 0);
+
+      &:hover {
+        background-color: rgb(0, 172, 0);
+      }
+    }
+
+    &.minus-btn {
+      background-color: red;
+
+      &:hover {
+        background-color: rgb(222, 0, 0);
+      }
+    }
+
+    &:active {
+      scale: 0.9;
+      box-shadow: 0px 0px 10px inset #3333336d,
+        -4px 4px 10px rgba(255, 217, 0, 0);
+    }
+  }
+}

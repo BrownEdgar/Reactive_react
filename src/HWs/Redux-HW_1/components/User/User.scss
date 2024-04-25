@@ -1,0 +1,45 @@
+.user {
+  background-color: #333;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #222;
+    margin: .5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+	 transition: all .23s ease 0s;
+
+	 &:hover {
+		scale: 1.01;
+
+		> .user__email {
+			color: gold;
+		}
+	 }
+  }
+
+  &__image {
+    width: 90px;
+    height: 90px;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    flex-basis: 100%;
+  }
+
+  &__username {
+    color: royalblue;
+  }
+
+  &__email {
+    font-size: 1.2rem;
+    color: whitesmoke;
+	 transition: all .23s ease 0s;
+  }
+}
