@@ -1,6 +1,0 @@
-export const RANDOMPUSH = 'RANDOMPUSH'
-export const SHUFFLE = 'SHUFFLE'
-export const DELETE = 'DELETE'
-export const ADDUSER = 'ADDUSER'
-export const REPLACE = 'REPLACE'
-export const PUSH = 'PUSH'
