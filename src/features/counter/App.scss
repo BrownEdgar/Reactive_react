@@ -1,0 +1,23 @@
+body{
+  background-color: rgb(2, 2, 17);
+  color: whitesmoke;
+}
+.App{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  button{
+    border-radius: 12px;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: royalblue;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    border: 0;
+  }
+}
