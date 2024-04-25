@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { saveTodos } from './features/todos/todosSlice'
+import { getTodos, saveTodos } from './features/todos/todosSlice'
 
 export default function App() {
-  const value = useSelector((state) => state.todos);
+  const todos = useSelector(getTodos);
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -12,7 +12,9 @@ export default function App() {
   })
   return (
     <div className='App'>
-      
+      {todos.map(elem => {
+        
+      })}
     </div>
   )
 }
