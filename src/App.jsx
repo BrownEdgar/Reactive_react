@@ -1,30 +1,29 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addCounter, getCounter } from './features/counter/counterSlice';
-import axios from 'axios';
-import { addUsers } from './features/users/usersSlice';
-import todosSlice from './features/todos/todosSlice';
+import Todos from '@/Todos/Todos';
+import { Field, Form, Formik } from 'formik';
+import { addUser } from '@f/users/usersSlice';
 
 export default function App() {
-  const counter = useSelector(getCounter());
   const dispatch = useDispatch()
-
-  useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/users')
-      .then(res => dispatch(addUsers(res.data)))
-  }, [])
-
-  useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/todos')
-      .then(res => dispatch(saveTodos(res.data)))
-  }, [])
-
+  const handleSubmit = (values, formik) => {
+    dispatch(addUser(values));
+    formik.resetForm()
+  }
 
 
   return (
     <div>
-      <h1>Redux counter: {counter}</h1>
-      <button onClick={() => dispatch(addCounter(3))}>PLUS</button>
+      <Formik
+        onSubmit={handleSubmit}
+        initialValues={{ username: '' }}
+      >
+        <Form>
+          <Field name="username" />
+          <input type="submit" value='save  user' />
+        </Form>
+      </Formik>
+      <Todos />
     </div>
   )
 }
