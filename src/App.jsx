@@ -1,22 +1,30 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { addCounter, getCounter } from './features/counter/counterSlice';
+import axios from 'axios';
+import { addUsers } from './features/users/usersSlice';
+import todosSlice from './features/todos/todosSlice';
+
+export default function App() {
+  const counter = useSelector(getCounter());
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/users')
+      .then(res => dispatch(addUsers(res.data)))
+  }, [])
+
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/todos')
+      .then(res => dispatch(saveTodos(res.data)))
+  }, [])
 
 
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
 
   return (
-    <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-      <button onClick={handleClick}>count: {count} </button>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus nisi ipsum omnis modi magni quaerat necessitatibus excepturi nemo id sequi nesciunt, architecto suscipit minima labore quo distinctio aspernatur fugiat molestias optio reprehenderit perspiciatis? Deserunt nam reprehenderit tenetur veniam veritatis?</p>
+    <div>
+      <h1>Redux counter: {counter}</h1>
+      <button onClick={() => dispatch(addCounter(3))}>PLUS</button>
     </div>
   )
 }
-
-export default App
