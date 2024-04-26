@@ -1,20 +1,33 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { addCounter } from '@/counter/counterSlice'
+import { addUsers } from '@/users/usersSlice'
+import axios  from 'axios'
+import { addTodos } from '@/todos/todosSlice'
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  const counter = useSelector((state) => state.counter)
+  const dispatch = useDispatch()
 
-  const handleClick = () => {
-    setCount(count + 1)
-  }
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/users')
+      .then(res => console.log(addUsers(res.data)))
+      // .then(res => dispatch(addUsers(res.data)))
+  }, [])
+  
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/todos')
+      .then(res => console.log(addTodos(res.data)))
+    // .then(res => dispatch(addUsers(res.data)))
+  }, [])
 
   return (
     <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-      <button onClick={handleClick}>count: {count} </button>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus nisi ipsum omnis modi magni quaerat necessitatibus excepturi nemo id sequi nesciunt, architecto suscipit minima labore quo distinctio aspernatur fugiat molestias optio reprehenderit perspiciatis? Deserunt nam reprehenderit tenetur veniam veritatis?</p>
+      <h1>counter: {counter}</h1>
+      <button onClick={() => dispatch(addCounter(3))}>Plus</button>
     </div>
   )
 }
