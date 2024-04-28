@@ -1,0 +1,74 @@
+.companies {
+  display: grid;
+  grid-template-columns: 25% auto;
+  justify-content: center;
+  align-items: top;
+  gap: 5rem;
+  
+
+  &__title {
+    margin-block: 1.5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #eee;
+  }
+
+  &__output {
+    background-color: #101522;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+
+    .output__title {
+      letter-spacing: 0.2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-family: Raleway;
+      font-weight: 800;
+      color: gold;
+      margin-bottom: 2rem;
+    }
+
+    > pre > b {
+      &::selection {
+         background-color: gold;
+         color: #252525;
+      }
+    }
+
+    > pre > b span {
+      &::selection {
+         background-color: gold;
+         color: #252525;
+      }
+    }
+  }
+}
+
+.output {
+  &__id {
+    color: rgb(192, 0, 0);
+  }
+  &__name {
+    color: royalblue;
+  }
+  &__contact {
+    color: yellowgreen;
+  }
+  &__address {
+    color: aqua;
+  }
+  &__phone {
+    color: gold;
+  }
+  &__email {
+    color: orangered;
+  }
+  &__number {
+    color: rgb(74, 164, 255);
+  }
+  &__date {
+    color: gold;
+  }
+}
