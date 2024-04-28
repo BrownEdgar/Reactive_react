@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getTodos, saveTodos } from '../features/todos/todosSlice'
+import { getTodos, saveTodos } from '@f/todos/todosSlice';
 import axios from 'axios'
 import './Todos.scss'
 
