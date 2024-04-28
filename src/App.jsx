@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import HomeWork22 from "./HomeWorks/HomeWork22/App"
+import HomeWork23 from "./HomeWorks/HomeWork23/App"
 
 function App() {
 
   return (
-    <HomeWork22 />
+    <HomeWork23 />
   )
 }
 
