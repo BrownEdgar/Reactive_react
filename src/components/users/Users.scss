@@ -1,0 +1,38 @@
+body{
+  background-color: dimgray;
+}
+
+.Users{
+  margin: auto;
+  form{
+    margin: 50px auto;
+    display: flex;
+    gap: 20px;
+    width: 500px;
+    input[type="submit"]{
+      padding: 1em 2em;
+      background-color: royalblue;
+      border-radius: 8px;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        scale: 1.01;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+    }
+    input[name="username"]{
+      padding: 0.6em 1em;
+      font-size: 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+      border: 2px solid royalblue;
+      &:focus{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        outline: yellow 1px solid;
+        border: 0;
+      }
+    }
+  }
+}

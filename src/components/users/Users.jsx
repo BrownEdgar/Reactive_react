@@ -1,7 +1,8 @@
+import React from 'react'
 import { addUser } from '@f/users/usersSlice'
 import { Field, Form, Formik } from 'formik'
-import React from 'react'
 import { useDispatch } from 'react-redux'
+import './Users.scss'
 
 export default function Users() {
   const dispatch = useDispatch()
