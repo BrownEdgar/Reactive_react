@@ -24,6 +24,20 @@ $panel-height: 60px;
     height: 550px;
     overflow: hidden auto;
 
+    &::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: .5rem;
+      background: #00022d;
+    }
+
     .output__title {
       letter-spacing: 0.2rem;
       text-align: center;
