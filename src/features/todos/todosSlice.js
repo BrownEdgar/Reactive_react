@@ -1,18 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import todosAPI from "./todosAPI";
 
 export const getAsyncTodos = createAsyncThunk(
     'todos/getAsyncTodos',
-     async () => {
-        return axios('https://jsonplaceholder.typicode.com/todos?_limit=10')
-            .then(res => res.data)
-})
+    todosAPI
+)
 
 const todosSlice = createSlice({
     name: "todos",
     initialState: {
         data: [],
         status: 'idle',
+        error: null,
     },
     reducers: {
         // saveTodos: (state, action) => {
@@ -21,15 +20,16 @@ const todosSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-        .addCase(getAsyncTodos.pending, (state, action) => {
-            state.status = 'pending'
+        .addCase(getAsyncTodos.pending, (state) => {
+            state.status = 'pending';
         })
         .addCase(getAsyncTodos.fulfilled, (state, action) => {
             state.status = 'succsess';
             state.data = action.payload;
         })
         .addCase(getAsyncTodos.rejected, (state, action) => {
-            state.status = 'failure'
+            state.status = 'failure';
+            state.error = action.error;
         })
     },
     selectors: {

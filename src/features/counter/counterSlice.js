@@ -8,8 +8,12 @@ const counterSlice = createSlice({
         addCounter: (state, action) => {
             return state + action.payload;
         }
-    }
+    },
+    selectors:  {
+       getCounter: (state) => state
+    },
 })
 
 export default counterSlice.reducer;
 export const { addCounter } = counterSlice.actions
+export const { getCounter } = counterSlice.selectors

@@ -1,31 +1,28 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
-import { useSelector, useDispatch } from 'react-redux'
-import { addCounter } from '../../features/counter/counterSlice';
-import './App.scss'
-import usersSlice, { addUsers } from '../../features/users/usersSlice';
-import { getAsyncTodos } from '../../features/todos/todosSlice';
-import Todos from 'components/Todos/Todos';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Todos from '@/Todos/Todos';
+import './App.scss';
+import { Field, Form, Formik } from 'formik';
+import { addUser } from '@f/users/usersSlice';
 
 function App() {
-    const counter = useSelector((state) => state.counter);
     const dispatch = useDispatch()
-
-    useEffect(() => {
-        axios('https://jsonplaceholder.typicode.com/users')
-        .then(res => dispatch(addUsers(res.data)))
-    }, []);
-
-    useEffect(() => {
-        // axios('https://jsonplaceholder.typicode.com/todos')
-        // .then(res => dispatch(saveTodos(res.data)))
-        dispatch(getAsyncTodos())
-    }, []);
+    const handleSubmit = (values, formik) => {
+      dispatch(addUser(values));
+      formik.resetForm()
+    }
     
   return (
     <div>
-        <h1>Redux counter: {counter}</h1>
-        <button onClick={() => dispatch(addCounter(5))}>PLUS</button>
+        <Formik 
+          onSubmit={handleSubmit}
+          initalValues={{username: ''}}
+          >
+          <Form>
+            <Field name="username"/>
+            <input type="submit" value={'save user'}/>
+          </Form>
+        </Formik>
         <Todos />
     </div>
   )

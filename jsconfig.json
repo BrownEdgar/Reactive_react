@@ -11,7 +11,7 @@
         "components/*"
       ],
       "@f/*": [
-        "features/*",
+        "features/*"
       ]
     }
   }
