@@ -1,0 +1,39 @@
+.Cities {
+  ul {
+    width: 600px;
+    margin: 20px auto;
+    list-style: none;
+    padding: 1em;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      font-size: 20px;
+      background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        scale: 1.05;
+        box-shadow: rgba(0, 0, 0 , 0.35) 0px 5px 15px;
+      }
+      button {
+        padding: 0.6em 1em !important;
+        background-color: red;
+        color: #fff;
+        cursor: pointer;
+        border: 0;
+        display: block;
+
+        border-radius: 12px;
+
+        // float: right;
+        // margin-bottom: 10px;
+      }
+    }
+    li.active {
+      background-image: linear-gradient(to right, #434343 0%, black 100%);
+      color: #fff;
+    }
+  }
+}
