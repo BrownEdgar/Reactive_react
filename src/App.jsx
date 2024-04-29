@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Todos from '@/Todos/Todos';
 import { Field, Form, Formik } from 'formik';
 import { addUser } from '@f/users/usersSlice';
+import { resetAction } from '@f/counter/counterSlice';
 
 export default function App() {
   const dispatch = useDispatch()
@@ -11,7 +12,9 @@ export default function App() {
     formik.resetForm()
   }
 
-
+  const handleClick = () => {
+    dispatch(resetAction())
+  }
   return (
     <div>
       <Formik
@@ -24,6 +27,7 @@ export default function App() {
         </Form>
       </Formik>
       <Todos />
+      <button onClick={handleClick}>RESET</button>
     </div>
   )
 }

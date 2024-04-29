@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import todosApi from './todosAPI';
+import { resetAction } from '@f/counter/counterSlice';
 
 export const getAsyncTodos = createAsyncThunk(
   'todos/getAsyncTodos',
@@ -10,7 +11,7 @@ export const getAsyncTodos = createAsyncThunk(
 const todosSlice = createSlice({
   name: "todos",
   initialState: {
-    data: [],
+    data: ["one"],
     status: 'idle',
     error: null
   },
@@ -27,6 +28,9 @@ const todosSlice = createSlice({
       .addCase(getAsyncTodos.rejected, (state, action) => {
         state.status = 'fail';
         state.error = action.error
+      })
+      .addCase(resetAction, (state, action) => {
+        state.data = []
       })
   },
   selectors: {

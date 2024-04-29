@@ -1,15 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAction, createSlice } from '@reduxjs/toolkit';
+
+
+export const resetAction = createAction('reset')
+
 
 const counterSlice = createSlice({
   name: "counter",
-  initialState: 0,
+  initialState: 1,
   reducers: {
     addCounter: (state, action) => {
-      return state + action.payload;
+      return state + 1;
     }
   },
   selectors: {
     getCounter: (state) => state
+  },
+  extraReducers: (builder) => {
+    builder.addCase(resetAction, (state, action) => {
+      return 0
+    })
   }
 })
 
