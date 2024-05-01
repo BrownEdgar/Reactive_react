@@ -7,6 +7,7 @@ body{
   form{
     margin: 50px auto;
     display: flex;
+    flex-direction: column;
     gap: 20px;
     width: 500px;
     input[type="submit"]{
@@ -33,6 +34,30 @@ body{
         outline: yellow 1px solid;
         border: 0;
       }
+    }
+  }
+
+  .data{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+    &__user{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__info{
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 0;
+      padding: 1em 0.6em;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
   }
 }

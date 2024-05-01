@@ -33,4 +33,4 @@ const usersSlice =  createSlice({
 })
 export default usersSlice.reducer;
 export const {addUser} = usersSlice.actions
-export const {getUsers} = makeTodos.selectors
+export const {getUsers} = usersSlice.selectors
