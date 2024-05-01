@@ -1,16 +1,24 @@
 import React from 'react'
-import { addUser } from '@f/users/usersSlice'
+import { addUser, getUsers } from '@f/users/usersSlice'
 import { Field, Form, Formik } from 'formik'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import './Users.scss'
 
 export default function Users() {
   const dispatch = useDispatch()
+  const users = useSelector(getUsers)
 
   const handleSubmit = (values, formik) => {
-    dispatch(addUser(values))
+    const data = {
+      name: values.name,
+      contact:{
+        address: values.address,
+        phone: values.phone,
+        email: values.email
+      }
+    }
+    dispatch(addUser(data))
     formik.resetForm()
-    console.log(values);
   }
 
   return (
@@ -20,10 +28,14 @@ export default function Users() {
         initialValues={{username: ''}}
       >
         <Form>
-          <Field name="username"/>
+          <Field name="name"/>
+          <Field name="address"/>
+          <Field name="phone"/>
+          <Field name="email"/> 
           <input type="submit" value="Add user"/>
         </Form>
       </Formik>
+      
     </div>
   )
 }

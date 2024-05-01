@@ -3,11 +3,7 @@ import { nanoid } from "nanoid";
 
 const checkUsers = (store) => (next) => (action) =>{
   if (action.type === 'users/addUser') {
-		const user = store.getState().users;
-		const res = user.some(elem => elem.username === action.payload.username)
-		if (res) {
-			action.payload.data = new Date().toLocaleTimeString()
-		}
+		action.payload.data = new Date().toLocaleTimeString()
   }
 	next(action)
 }
