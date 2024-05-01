@@ -28,14 +28,39 @@ export default function Users() {
         initialValues={{username: ''}}
       >
         <Form>
-          <Field name="name"/>
-          <Field name="address"/>
-          <Field name="phone"/>
-          <Field name="email"/> 
+          <Field type="text" name="name"/>
+          <Field type="text" name="address"/>
+          <Field type="text" name="phone"/>
+          <Field type="email" name="email"/> 
           <input type="submit" value="Add user"/>
         </Form>
       </Formik>
       
+      <div className="data">
+        {users.data.map((item) => {
+          return(
+            <div className="data__info">
+              <div className='data__userName data__user'>
+                <span className='data__saved'>name:</span>
+                <span>{item.name}</span>
+              </div>
+              <div className='data__address data__user'>
+                <span className='data__saved'>address:</span>
+                <span>{item.address}</span>
+              </div>
+              <div className='data__phone data__user'>
+                <span className='data__saved'>phone:</span>
+                <span>{item.phone}</span>
+              </div>
+              <div className="data__email data__user">
+                <span className='data__saved'>Email:</span>
+                <span>{item.email}</span>
+              </div>
+              
+            </div>
+          )
+        })}
+      </div>    
     </div>
   )
 }
