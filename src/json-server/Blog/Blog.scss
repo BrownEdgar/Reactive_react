@@ -1,0 +1,19 @@
+.Blog {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 1em;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    list-style: none;
+  }
+}

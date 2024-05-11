@@ -1,0 +1,11 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Who killed Kennedy?",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aliquid consequuntur perferendis non quia dolorem excepturi quasi. Corporis veniam voluptatem adipisci ab laborum commodi? dignissimos sapiente quis accusamus temporibus in! Repellat iure, quae quia itaque eveniet reprehenderit similique.",
+      "poster": "./images/kenedi.jpg",
+      "date": "2024/02/05"
+    }
+  ]
+}
