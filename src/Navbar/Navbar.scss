@@ -1,0 +1,39 @@
+.Navbar {
+  width: 100%;
+  background: black;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  nav {
+    height: 100%;
+    ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 20px;
+      li {
+        margin-right: 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        a {
+          color: white;
+          &.active {
+            background-color: #141414;
+            border-radius: 8px;
+            padding: 0.4em;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    font-size: 0.6em 1em;
+    color: #1d1d1d;
+    padding: 2px;
+    a {
+      letter-spacing: 4px;
+      color: inherit;
+    }
+  }
+}

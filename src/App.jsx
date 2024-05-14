@@ -1,16 +1,23 @@
-// import { useState } from 'react'
-import './App.css'
-import Blog from './components/Blog/Blog'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import './App.scss'
+import ROUT from './Navbar/route'
+import Home from './Navbar/page/Home/Home'
+import Navbar from './Navbar/Navbar'
+import About from './Navbar/page/About/About'
+import Properties from './Navbar/page/Properties/Properties'
+import Services from './Navbar/page/Services/Services'
 
-
-
-function App() {
+export default function App() {
   return (
     <div className='App'>
-      <h1>Hello react with <span>VITE</span></h1>
-      <Blog />
+      <Navbar />
+      <Routes>
+        <Route path={ROUT.HOME} element={<Home />} />
+        <Route path={ROUT.ABOUT} element={<About />} />
+        <Route path={ROUT.PROPERTIES} element={<Properties />} />
+        <Route path={ROUT.SERVICES} element={<Services />} />
+      </Routes>
     </div>
   )
 }
-
-export default App
