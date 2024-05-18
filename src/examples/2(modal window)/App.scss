@@ -1,0 +1,32 @@
+.App {
+    margin-left: 100px;
+    &_title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &_posts {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: start;
+        & > div {
+            position: relative;
+            padding: 1em;
+            border-radius: 12px;
+            color: rgb(0, 0, 0);
+            flex-basis: 30%;
+            background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+            h2 {
+                font-weight: 200;
+            }
+            i {
+                position: absolute;
+                font-size: 36px;
+                top: 2px;
+                right: 2px;
+                color: red;
+                cursor: pointer;
+            }
+        }
+    }
+}
